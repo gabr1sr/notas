@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       6035d0c6-cf00-4156-9747-ad8bf0b9171e
+:END:
+#+title: Aprendizado de Máquina Reforçado
+#+date: [2023-11-28 ter 12:36]
+#+filetags: :ai:ml:reinforced:
+- tags :: [[id:4300010e-271a-418a-ac6d-c526723bf582][Aprendizado de Máquina (ML)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/introduction-to-ai/][Introduction to AI]]
+
+É o tipo de Aprendizado de Máquina similar ao Aprendizado de Máquina Supervisionado, porém, o algoritmo aprende através de tentativas e erros.
+
+Essa ação ocorre em um ambiente controlado e recebe feedback em forma de prêmios ou penalidades.
+
+Com o passar do tempo, ele aprende a fazer decisões melhores para maximizar seu ganho de prêmios.
+
+Por exemplo, o sistema IBM Watson que ganhou o Jeopardy! usou o aprendizado reforçado para saber quando responder a perguntas e quanto apostar.

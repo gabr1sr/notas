@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       afc06355-a18f-4b8a-be06-b217a776e4ac
+:END:
+#+title: Criptomoedas
+#+date: [2023-11-28 ter 13:20]
+#+filetags: :cryptocurrency:blockchain:
+- tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
+- source :: [[https://pt.wikipedia.org/wiki/Criptomoeda][Criptomoeda (Wikipedia)]]
+
+É um meio de troca que utiliza tecnologia blockchain e criptografia criptografia para assegurar a validade das transações e a criação de novas unidades da moeda.
+
+* Tipos
+- Criptomoedas Voláteis
+- Criptomoedas Estáveis - [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]

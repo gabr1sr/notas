@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       cbe8c0fe-1f21-4237-9514-4e74ac816601
+:END:
+#+title: Virtual (Solidity)
+#+date: [2023-12-08 sex 09:02]
+- tags :: [[id:f87049ce-6295-48c6-9ea4-9b1d73df99bc][Funções (Solidity)]]
+- source :: [[https://docs.soliditylang.org/en/latest/contracts.html#function-overriding][Solidity Docs | Function Overriding]]
+
+A palavra-chave ~virtual~ é um modificador utilizado para marcar funções ou modificadores que podem ser sobrescritos.
+
+Essas funções e modificadores podem ser sobrescritos utilizando a palavra-chave [[id:c22c2bb1-1593-4233-a2be-70f09355e55c][Override (Solidity)]].
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract VirtualExample {
+    address owner;
+    
+    modifier onlyOwner() virtual {
+	require(msg.sender == owner);
+	_;
+    }
+
+    function transferOwnership(address newOwner) external virtual onlyOwner {
+	owner = newOwner;
+    }
+}
+#+end_src

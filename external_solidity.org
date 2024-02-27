@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       266a1a8f-5fc5-4c1a-a20b-e8937cace855
+:END:
+#+TITLE: External (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:bf19d622-fb59-4ed3-94b6-fea51f52eba9][Tipos de Visibilidade (Solidity)]]
+- source ::
+
+Modificador de visibilidade para funções que faz com que ela possa ser chamada apenas por usuários ou contratos externos.
+
+#+BEGIN_SRC solidity
+  contrtact ExternalExample {
+      // Esta é uma função externa
+      function getValue() external view returns (string memory) {
+	  return "Posso ser chamado apenas por usuários ou contratos externos!";
+      }
+  }
+#+END_SRC

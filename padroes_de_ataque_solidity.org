@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       63ff893c-2383-4955-b029-ec9c9a3cc672
+:END:
+#+TITLE: Padrões de Ataque (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source ::
+
+Padrões de ataque que acontecem na linguagem Solidity.
+
+- [[id:aeba353a-a29e-49a3-955d-e4bc8577f9df][Vetores de Ataque em Chamadas Externas (Solidity)]]
+- [[id:6911c4bd-108e-445d-bb96-b1f44ba32dd7][Ataques de Ultrapassagem (Solidity)]]

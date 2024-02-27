@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       703eb852-19b0-4f0c-913f-82ae439e0c12
+:END:
+#+title: Literais (Rust)
+#+date: [2024-01-13 sáb 16:07]
+#+filetags: :rust:type:literals:
+- tags :: [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/types/literals.html][Literals - Rust By Example]]
+
+Literais numéricos podem ter anotações de tipo adicionando o tipo como sufixo.
+
+#+begin_src rust
+let x = 1u8;
+let y = 2u32;
+let z = 3f32;
+
+println!("size of `x` in bytes: {}", std::mem::size_of_val(&x));
+println!("size of `y` in bytes: {}", std::mem::size_of_val(&y));
+println!("size of `z` in bytes: {}", std::mem::size_of_val(&z));
+#+end_src
+
+#+RESULTS:
+: size of `x` in bytes: 1
+: size of `y` in bytes: 4
+: size of `z` in bytes: 4
+
+O tipo dos literais numéricos sem sufixo de tipo depende de como eles são usados ([[id:c44d0c56-9232-4ba8-b679-b1e2af19a786][Inferência de Tipos (Rust)]]).
+
+Se não existir nenhuma restrição, o compilador irá usar ~i32~ para inteiros e ~f64~ para pontos flutuantes.
+
+#+begin_src rust
+let i = 1;
+let f = 1.0;
+
+println!("size of `i` in bytes: {}", std::mem::size_of_val(&i));
+println!("size of `f` in bytes: {}", std::mem::size_of_val(&f));
+#+end_src
+
+#+RESULTS:
+: size of `i` in bytes: 4
+: size of `f` in bytes: 8
+
+Veja:
+- [[id:7f75a1ef-9dfa-429d-83db-cd43ea94ac7e][Inteiros com Sinal (Rust)]]
+- [[id:5fc6ede8-8ce5-4e88-a696-e65ed8faf72e][Inteiros sem Sinal (Rust)]]
+- [[id:8ce5656e-3c56-4ae7-b103-65a62b0a9ec9][Ponto Flutuante (Rust)]]

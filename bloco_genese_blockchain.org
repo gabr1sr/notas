@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       fd7e5153-ac4b-443e-aca3-8d14d93c0fa5
+:END:
+#+title: Bloco Gênese (Blockchain)
+#+date: [2023-11-28 ter 13:08]
+#+filetags: :blockchain:blocks:genesis:
+- tags :: [[id:ad539989-2434-4a7d-a702-1db7e422ce85][Blocos (Blockchain)]]
+- source :: [[https://learnweb3.io/courses/9a3fafe4-b5eb-4329-bdef-97b2aa6aacc1/lessons/ce29b763-054c-4a19-bca8-dba1e55a6e52][LearnWeb3 DAO | What is a blockchain?]]
+
+É o estado (ou bloco) inicial de uma Blockchain.
+
+Esse não aponta para o hash de nenhum bloco anterior, já que não existe nenhum outro bloco antes dele.

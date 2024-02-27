@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       86c8b40e-65c3-4466-9bf9-85e4987e1ef3
+:END:
+#+title: Check-Effects-Interactions (CEI)
+#+date: 2023-09-12
+- tags :: [[id:bf1022e8-e7a5-4601-b384-12b244d3c92a][Padrões de Segurança (Solidity)]]
+- source :: [[https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html][Check Effects Interactions]], [[https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern][Use the Checks-Effects-Interactions Pattern]]
+
+É um padrão criado com o propósito de reduzir a superfície de ataque de contratos inteligentes maliciosos que tentam sequestrar o fluxo de controle após uma chamada externa.
+
+* Metodologia
+- *Check:* checar se as alterações de estado são possíveis
+- *Effects:* fazer as alterações de estados
+- *Interactions:* executar as funções que interagem com esses estados
+
+* Amostras
+** Código Vulnerável
+#+begin_src solidity
+function withdraw(uint256 amount) public {
+    require(balances[msg.sender] >= amount, "No sufficient amount");
+    (bool success,) = msg.sender.call{value: amount}("");
+    require(success, "Failed to withdraw");
+    balances[msg.sender] -= amount;
+}
+#+end_src
+
+** Código Usando CEI
+#+begin_src solidity
+function withdraw(uint256 amount) public {
+    require(balances[msg.sender] >= amount, "No sufficient amount"); // Check
+    balances[msg.sender] -= amount; // Effect
+    (bool success,) = msg.sender.call{value: amount}(""); // Interaction
+    require(success, "Failed to withdraw");
+}
+#+end_src

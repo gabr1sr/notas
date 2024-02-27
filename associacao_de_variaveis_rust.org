@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       dd7d9276-04fc-45c8-b90d-61d4cd9b75c3
+:END:
+#+title: Associação de Variáveis (Rust)
+#+date: [2023-11-11 sáb 23:28]
+#+filetags: :rust:var:
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]]
+
+* Declaração de Variáveis
+- [[id:898e5d59-d417-4815-b060-d36c1af4e2d7][Variáveis Imutáveis (Rust)]]
+- [[id:55896c2b-98a9-4b9a-ba67-f8504a289a3d][Variáveis Mutáveis (Rust)]]
+
+* Técnicas
+- [[id:ef3c8158-eaed-4161-af1b-36c82056f070][Shadowing (Rust)]]
+- [[id:72670694-b283-4fd0-b734-8b556e94424d][Escopo (Rust)]]

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       dc9ef36e-6f51-49e8-8e98-0fd64585968f
+:END:
+#+title: Pragma de Versão (Solidity)
+#+date: 2023-09-22
+- tags :: [[id:e9197335-eebd-4af5-8258-fc30baeccbcd][Pragma (Solidity)]]
+- source ::  [[https://docs.soliditylang.org/en/v0.8.21/layout-of-source-files.html#version-pragma][Version Pragmas]]
+
+Define a versão do compilador Solidity a ser utilizada no contrato atual.
+
+~pragma solidity ^0.8.19~ especifica a utilização do compilador Solidity versão 0.8.19 ou superior no contrato atual.
+
+~pragma solidity 0.8.19~ especifica a utilização do compilador Solidity apenas versão 0.8.19 no contrato atual.

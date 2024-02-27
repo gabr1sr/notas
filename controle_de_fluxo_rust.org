@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       5a70fb7b-8198-4f96-bd42-296a23b986bd
+:END:
+#+title: Controle de Fluxo (Rust)
+#+date: [2024-02-26 Mon 17:34]
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/flow_control.html][Flow of Control - Rust By Example]], [[https://google.github.io/comprehensive-rust/pt-BR/control-flow-basics.html][Fundamentos de Controle de Fluxo]]
+
+Podemos dividir as formas de controle de fluxo em Rust nas seguintes seções:
+
+* Condicionais
+- [[id:b1148684-0950-4319-847b-bac303e72fc4][If e Else (Rust)]]
+
+* Loops
+- [[id:5980241c-5383-45bf-9123-f77e4d7dc79b][While (Rust)]]
+- [[id:2b5ac93e-b896-4606-9615-aa7057c18d08][For (Rust)]]
+- [[id:2f18a3d3-9834-4fcf-beb1-76ac557af103][Loop (Rust)]]
+- [[id:abc54a3f-7b13-4f31-95e3-1e937f022b5a][Break (Rust)]]
+- [[id:c9b830a0-b5e1-49a4-98ac-bd7e193f652f][Continue (Rust)]]

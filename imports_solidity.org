@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       b51a8545-1375-4cd7-984e-3906ebf5789a
+:END:
+#+title: Imports (Solidity)
+#+date: [2023-12-08 sex 11:33]
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/storage-factory/solidity-imports?lesson_format=video][Updraft Cyfrin | Solidity imports]], [[https://docs.soliditylang.org/en/latest/layout-of-source-files.html#syntax-and-semantics][Solidity Docs | Syntax and Semantics]]
+
+Em Solidity, podemos importar códigos das seguintes formas:
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "filename";
+#+end_src
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import * as symbolName from "filename";
+#+end_src
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "filename" as symbolName;
+#+end_src
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import {symbol1 as alias, symbol2} from "filename";
+#+end_src

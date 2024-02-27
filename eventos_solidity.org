@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       851cb316-e690-48f9-8527-39551faeff9f
+:END:
+#+TITLE: Eventos (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/][Digging deeper into Solidity's syntax]]
+
+Eventos possibilitam os contratos fazerem logging de dados na blockchain. Logs de um contrato podem ser processados depois para fazer atualizações na interface front-end, por exemplo. Eles são comumente utilizados para possibilitar as interfaces front-end se atentarem a eventos específicos e atualizar a interface do usuário, ou usadas como uma forma barata de armazenamento.
+
+#+BEGIN_SRC solidity
+contract EventsExample {
+    event TestCalled(address sender, string message);
+
+    function test() public {
+        emit TestCalled(msg.sender, "Someone called test()!");
+    }
+}
+#+END_SRC

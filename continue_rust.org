@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       c9b830a0-b5e1-49a4-98ac-bd7e193f652f
+:END:
+#+title: Continue (Rust)
+#+date: [2024-02-26 Mon 21:46]
+- tags :: [[id:5a70fb7b-8198-4f96-bd42-296a23b986bd][Controle de Fluxo (Rust)]]
+- source :: [[https://google.github.io/comprehensive-rust/control-flow-basics/break-continue.html][break and continue]], [[https://doc.rust-lang.org/reference/expressions/loop-expr.html#continue-expressions][continue expressions]]
+
+A palavra-chave ~continue~ é utilizada quando queremos começar a próxima iteração imediatamente, dentro de um loop.
+
+#+begin_src rust
+let mut i = 0;
+
+loop {
+    i += 1;
+
+    if i > 5 {
+        break;
+    }
+
+    if i % 2 == 0 {
+        continue;
+    }
+
+    println!("{}", i);
+}
+#+end_src
+
+#+RESULTS:
+: 1
+: 3
+: 5

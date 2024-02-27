@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       f8d89974-8605-4c76-a07b-931a2ede6bc6
+:END:
+#+TITLE: Heranças (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/][Digging deeper into Solidity's syntax]]
+
+Herança é o procedimento onde um contrato pode herdar os atributos e métodos de outro contrato. Solidity suporta múltipla herança. Contratos podem herdar outros contratos utilizando a palavra-chave ~is~.
+
+Um contrato-pai que tem uma ou mais funções que podem ser sobrescritas (overridden) por um contrato-filho devem ser declaradas como ~virtual~.
+
+Um contrato-filho deve usar a palavra-chave ~override~ quando for sobrescrever uma função herdada.
+
+A ordem de herança depende se os contratos-pai compartilham os métodos ou atributos de mesmo nome. Se os atributos e métodos forem iguais, a parente mais à direita vai ser o mais importante.
+
+#+BEGIN_SRC solidity
+contract A {
+    function foo() public pure virtual returns (string memory) {
+        return "A";
+    }
+}
+
+contract B is A {
+    function foo() public pure virtual override returns (string memory) {
+        return "B";
+    }
+}
+
+contract C is A {
+    function foo() public pure virtual override returns (string memory) {
+        return "C";
+    }
+}
+
+contract D is B, C {
+    // D.foo() retorna "C"
+    function foo() public pure override(B, C) returns (string memory) {
+        return super.foo();
+    }
+}
+
+contract E is C, B {
+    // E.foo() retorna "B"
+    function foo() public pure override(C, B) returns (string memory) {
+        return super.foo();
+    }
+}
+#+END_SRC

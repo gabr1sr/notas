@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       56aa1698-0dcd-4bcf-b54e-7299b65176db
+:END:
+#+title: Stablecoins Atrelados
+#+date: [2023-11-28 ter 13:24]
+- tags :: [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+
+São stablecoins cujo valor está atrelado ou ancorado a outro ativo, seja ele digital ou real.

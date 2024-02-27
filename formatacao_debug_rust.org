@@ -1,0 +1,100 @@
+:PROPERTIES:
+:ID:       121cad52-9896-4c25-b332-020d6c3c316b
+:END:
+#+title: Formatação Debug (Rust)
+#+date: [2023-11-13 seg 06:56]
+#+filetags: :rust:macro:format:debug:
+- tags :: [[id:cbe7e407-21a5-4ea3-8974-8eeece0abeee][Formatação (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/hello/print.html][Formatted print - Rust By Example]], [[https://doc.rust-lang.org/rust-by-example/hello/print/print_debug.html][Debug - Rust By Example]], [[https://doc.rust-lang.org/std/fmt/][std::fmt Module]], [[https://doc.rust-lang.org/std/fmt/trait.Debug.html][std::fmt::Debug Trait]]
+
+É o ~trait~ da ~std::fmt~ utilizado para depuração.
+
+Todos os tipos que quiserem ser impressos usando depuração devem ter uma implementação para ~fmt::Debug~.
+
+Ou simplesmente utilizar ~derive~ para automaticamente criar uma implementação.
+
+Os tipos da ~std~ já têm essa implementação, com exceção do ~struct~.
+
+* Flags
+- ~?~ => Depuração padrão
+- ~#?~ => Depuração mais elegante (pretty-printing)
+- ~x?~ => Depuração com inteiros hexadecimais em minúsculo
+- ~X?~ => Depuração com inteiros hexadecimais em maiúsculo
+
+* Como Usar
+Para os tipos que já têm essa implementação, você pode utilizar da seguinte forma:
+
+#+begin_src rust :results output
+fn main() {
+    let value: i32 = 45;
+    
+    println!("Debug '?' {:?}", value);
+    println!("Debug '#?' {:#?}", value);
+    println!("Debug 'x?' {:x?}", value);
+    println!("Debug 'X?' {:X?}", value);
+}
+#+end_src
+
+#+RESULTS:
+: Debug '?' 45
+: Debug '#?' 45
+: Debug 'x?' 2d
+: Debug 'X?' 2D
+
+Para os tipos que não têm essa implementação, como o ~struct~, por exemplo, podemos fazer isto:
+
+#+begin_src rust :results output
+#[derive(Debug)]
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn main() {
+    let origin = Point { x: 0, y: 0 };
+    
+    println!("Debug '?' {:?}", origin);
+    println!("Debug '#?' {:#?}", origin);
+}
+#+end_src
+
+#+RESULTS:
+: Debug '?' Point { x: 0, y: 0 }
+: Debug '#?' Point {
+:     x: 0,
+:     y: 0,
+: }
+
+Ou implementar de forma manual:
+
+#+begin_src rust :results output
+use std::fmt;
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl fmt::Debug for Point {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("Point")
+            .field("x", &self.x)
+            .field("y", &self.y)
+            .finish()
+    }
+}
+
+fn main() {
+    let origin = Point { x: 0, y: 0 };
+
+    println!("Debug '?' {:?}", origin);
+    println!("Debug '#?' {:#?}", origin);
+}
+#+end_src
+
+#+RESULTS:
+: Debug '?' Point { x: 0, y: 0 }
+: Debug '#?' Point {
+:     x: 0,
+:     y: 0,
+: }

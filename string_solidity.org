@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       57281758-b616-430d-b875-bde0f5eea2dc
+:END:
+#+title: String (Solidity)
+#+date: [2023-12-07 qui 23:13]
+- tags :: [[id:6c7fd246-3500-487d-9e14-374e1417f8f4][Tipos Básicos (Solidity)]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-basic-types?lesson_format=video][Updraft Cyfrin | Basic variable types]], [[https://docs.soliditylang.org/en/latest/types.html#dynamically-sized-byte-array][Solidity Docs | Dynamically-sized byte array]], [[https://docs.soliditylang.org/en/latest/types.html#string-literals-and-types][Solidity Docs | String literals and types]]
+
+Em Solidity, as strings são declaradas com a palavra-chave ~string~.
+
+Elas são strings de tamanho dinâmico codificadas em UTF-8.
+
+#+begin_src solidity
+// SPDX-License-Identifier: GPLv3
+pragma solidity ^0.8.0;
+
+contract StringExample {
+    string value = "hello world!";
+    string value2 = unicode"happy christmas 🎅";
+    string value3 = "\\\n\'\"\r\t\x00\u0000";
+    string value4 = "first line\
+second line\
+third line";
+    string value5 = "why" "can" "i" "do" "this?";
+
+    function stringFunction() public pure returns (string memory) {
+	return "hello from Solidity";
+    }
+}
+#+end_src

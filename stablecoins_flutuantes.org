@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a5dd49e9-a585-4cf0-b347-591201c4b493
+:END:
+#+title: Stablecoins Flutuantes
+#+date: [2023-11-28 ter 13:25]
+- tags :: [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+
+São stablecoins que utilizam matemática e outros mecanismos para manter um valor constante de poder de compra.

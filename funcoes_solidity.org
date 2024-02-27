@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       f87049ce-6295-48c6-9ea4-9b1d73df99bc
+:END:
+#+title: Funções (Solidity)
+#+date: [2023-12-08 sex 08:35]
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-functions][Updraft Cyfrin | Functions]], [[https://docs.soliditylang.org/en/latest/types.html#function-types][Solidity Docs | Function Types]], [[https://docs.soliditylang.org/en/latest/style-guide.html#function-declaration][Solidity Docs | Function Declaration]], [[https://docs.soliditylang.org/en/latest/style-guide.html#order-of-functions][Solidity Docs | Order of Functions]], [[https://docs.soliditylang.org/en/latest/contracts.html#function-visibility][Solidity Docs | Function Visibility]], [[https://docs.soliditylang.org/en/latest/contracts.html#state-mutability][Solidity | State Mutability]], [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity][LearnWeb3 | Introduction to Solidity]], [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax][LearnWeb3 | Digging deeper into Solidity's syntax]], [[https://learnweb3.io/lessons/access-private-data-in-smart-contracts][LearnWeb3 | Access private data in smart contracts]]
+
+Em Solidity, podemos declarar funções através da palavra-chave ~function~.
+
+* Síntaxe
+A síntaxe para declaração de função é a seguinte:
+
+~function <functionName>(<parameter types>) {public|private|internal|external} [pure|view|payable] [returns (<return types>)]~
+
+* Ordenação e Agrupamento
+** Ordem de Modificadores
+Os modificadores devem seguir a seguinte ordem:
+- Visibilidade
+- Mutabilidade
+- Virtual
+- Override
+- Modificadores customizados
+
+** Agrupamento de Funções
+As funções devem ser agrupadas na seguinte ordem:
+- constructor
+- receive function (se existir)
+- fallback function (se existir)
+- external
+- public
+- internal
+- private
+
+~view~ e ~pure~ por último nesses agrupamentos.
+
+* Modificadores
+** Modificadores de Visibilidade
+- [[id:2c5c3cab-b299-46c0-9cf4-1dfbddc38c57][Public (Solidity)]]
+- [[id:9ecf13ad-f610-4679-a780-8d4751fc37db][Private (Solidity)]]
+- [[id:266a1a8f-5fc5-4c1a-a20b-e8937cace855][External (Solidity)]]
+- [[id:9d8c341b-91da-4018-bfbe-18134c0462de][Internal (Solidity)]]
+
+Caso não especificado, ela será ~internal~ por padrão.
+
+** Modificadores de Mutabilidade
+- [[id:fa5a6c1d-4e41-4d41-82b6-c3cf5c55d6f4][View (Solidity)]]
+- [[id:33f363df-ddc3-4ff5-b587-8fb163010997][Pure (Solidity)]]
+
+** Modificadores de Substituição
+- [[id:cbe8c0fe-1f21-4237-9514-4e74ac816601][Virtual (Solidity)]]
+- [[id:c22c2bb1-1593-4233-a2be-70f09355e55c][Override (Solidity)]]
+  
+** Modificadores Customizados
+- [[id:cdd1c7cb-dc35-4cd8-95b8-8ea2e8fd28f6][Modificadores de Funções (Solidity)]]
+
+* Funções Especiais
+- [[id:de8fa35d-8bbc-481e-b1c8-e3321f67e0a6][Construtores (Solidity)]]
+- [[id:3def0416-7f77-489b-825b-c80d61a75f79][Recebendo ETH (Solidity)]] (receive e fallback)
+
+* Exemplos
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract FunctionExample {
+    uint256 stateVariable1;
+
+    constructor(uint256 stateVariable1_) {
+	stateVariable1 = stateVariable1_;
+    }
+
+    receive() external payable {}
+
+    fallback() external payable {}
+    
+    function foo() external pure returns (string memory) {
+	return "foo";
+    }
+    
+    function getStateVariable1() public view returns (uint256) {
+	return stateVariable1;
+    }
+    
+    function hello() public pure returns (string memory) {
+	return "hello";
+    }
+
+    function _world() internal pure returns (string memory) {
+	return "world";
+    }
+
+    function _helloWorld() private pure returns (string memory) {
+	return string.concat(hello(), " ", _world(), "!");
+    }
+}
+#+end_src

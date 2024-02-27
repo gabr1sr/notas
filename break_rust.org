@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       abc54a3f-7b13-4f31-95e3-1e937f022b5a
+:END:
+#+title: Break (Rust)
+#+date: [2024-02-26 Mon 21:42]
+- tags :: [[id:5a70fb7b-8198-4f96-bd42-296a23b986bd][Controle de Fluxo (Rust)]]
+- source :: [[https://google.github.io/comprehensive-rust/control-flow-basics/break-continue.html][break and continue]], [[https://doc.rust-lang.org/reference/expressions/loop-expr.html#break-expressions][break expressions]]
+
+A palavra-chave ~break~ é utilizada para interromper a execução do corpo de um loop.
+
+#+begin_src rust
+let mut last = 0;
+for x in 1..100 {
+    if x > 12 {
+        break;
+    }
+    last = x;
+}
+
+println!("{last}");
+#+end_src
+
+#+RESULTS:
+: 12
+
+Pode também ser usado em conjunto com rótulos:
+
+#+begin_src rust
+'outer: loop {
+    while true {
+        break 'outer;
+    }
+}
+#+end_src
+
+Ou parar a execução do corpo de algum e retornar valores:
+
+#+begin_src rust
+let result = 'block: {
+    if 1 > 2 {
+        break 'block 1;
+    }
+
+    if 2 > 1 {
+        break 'block 2;
+    }
+
+    3
+};
+
+println!("{result}");
+#+end_src
+
+#+RESULTS:
+: 2

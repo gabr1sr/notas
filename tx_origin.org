@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0a1303e5-b80a-44a1-999e-d4d24b132b5b
+:END:
+#+TITLE: tx.origin
+#+DATE: 2023-09-07
+- tags :: [[id:9fb65783-f01a-41f3-9e4d-320af8da5ab4][Variáveis Globais (Solidity)]]
+- source ::
+
+É uma variável global que retorna o endereço de quem originou a transação.

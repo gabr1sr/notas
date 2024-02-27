@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       2c5c3cab-b299-46c0-9cf4-1dfbddc38c57
+:END:
+#+TITLE: Public (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:f87049ce-6295-48c6-9ea4-9b1d73df99bc][Funções (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]]
+
+Modificador de visibilidade para variáveis e funções que faz com que ela possa ser chamada tanto por usuários e contratos externos quanto pelo próprio contrato em que ela está.
+
+#+BEGIN_SRC solidity
+  contract PublicExample {
+      // Essa é uma variável pública
+      uint256 public value;
+
+      // Essa é uma função pública
+      function getValue() public view returns (uint256) {
+	  return value;
+      }
+  }
+#+END_SRC

@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       55896c2b-98a9-4b9a-ba67-f8504a289a3d
+:END:
+#+title: Variáveis Mutáveis (Rust)
+#+date: [2023-11-11 sáb 23:56]
+#+filetags: :rust:var:mutability:
+- tags :: [[id:dd7d9276-04fc-45c8-b90d-61d4cd9b75c3][Variáveis (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/rust-by-example/variable_bindings/mut.html][Mutability - Rust By Example]]
+
+* Declaração
+As variáveis mutáveis são as variáveis que podem ter seus valores alterados. Porém, seu tipo não pode ser alterado.
+
+** Demonstração
+Elas podem ser declaradas utilizando as palavras-chave ~let~ e ~mut~:
+
+#+begin_src rust :results output
+let mut float1: f64 = 1.0;
+
+println!("float1: {:?}", float1);
+
+float1 = 2.0;
+
+println!("float1: {:?}", float1);
+
+let mut _unused_var = 456;
+
+let other_var;
+other_var = 789;
+#+end_src
+
+#+RESULTS:
+: float1: 1.0
+: float1: 2.0
+
+** Anatomia
+A síntaxe de declaração de variáveis imutáveis é essa:
+
+~let mut <nome>:<tipo?> = <valor>~
+
+*** Explicação
+- ~let~ => é a palavra-chave reservada para a declaração de variáveis
+- ~mut~ => é a palavra-chave reservada para especificar que a variável declarada é mutável
+- ~<nome>~ => é o nome da variável
+- ~<tipo?>~ (opcional) => é a anotação de tipo da variável
+- ~<valor>~ => é o valor da variável
+
+*** Observações
+Se o ~<tipo?>~ não for usado na declaração da variável, você pode utilizar o tipo padrão da variável (para números inteiroes é ~i32~ e para números flutuantes é ~f64~):
+
+#+begin_src rust
+let mut an_integer = 365; // i32
+let mut a_float = 45.0;   // f64
+#+end_src
+
+Ou então declarar o tipo no sufixo do valor da variável:
+
+#+begin_src rust
+let mut another_integer = 365i32; // i32
+let mut another_float = 444.4f64; // f64
+#+end_src
+

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       9fb65783-f01a-41f3-9e4d-320af8da5ab4
+:END:
+#+TITLE: Variáveis Globais (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:c79bb7b0-b848-42ab-b9f2-9e0ac690237e][Tipos de Variáveis (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]]
+
+São variáveis que providenciam informações sobre a blockchain.
+
+Elas foram injetadas pela EVM.
+
+Elas incluem coisas como quem enviou a transação, timestamp do bloco, hash do bloco, etc.
+
+- [[id:0a1303e5-b80a-44a1-999e-d4d24b132b5b][tx.origin]]
+- [[id:f2c7b91b-933e-42c7-81cc-013f1dc0a3d5][msg.sender]]
+- [[id:b096ded8-c8db-4cf6-b20b-81be3ef5b952][msg.value]]

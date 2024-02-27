@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       bf1022e8-e7a5-4601-b384-12b244d3c92a
+:END:
+#+title: Padrões de Segurança (Solidity)
+#+date: 2023-09-12
+
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://fravoll.github.io/solidity-patterns/][Solidity Patterns]]
+
+São padrões de segurança para a linguagem de programação Solidity.
+
+- [[id:86c8b40e-65c3-4466-9bf9-85e4987e1ef3][Check-Effects-Interactions (CEI)]]

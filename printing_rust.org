@@ -1,0 +1,86 @@
+:PROPERTIES:
+:ID:       0d87efeb-fa6f-4d7e-a963-6d03284757c4
+:END:
+#+title: Printing (Rust)
+#+date: [2023-11-13 seg 06:20]
+#+filetags: :rust:macro:print:
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/hello/print.html][Formatted print - Rust By Example]], [[https://doc.rust-lang.org/std/fmt/][std::fmt Module]], [[https://doc.rust-lang.org/std/macro.print.html][std::print Macro]], [[https://doc.rust-lang.org/std/macro.println.html][std::println Macro]], [[https://doc.rust-lang.org/std/macro.eprint.html][std::eprint Macro]], [[https://doc.rust-lang.org/std/macro.eprintln.html][std::eprintln Macro]]
+
+A impressão (printing) na linguagem Rust é realizada através de uma série de ~macros~ definidas na ~std::fmt~.
+
+* Macros de Impressão
+- ~format!~ => escreve texto formatado para ~String~ (veja [[id:cbe7e407-21a5-4ea3-8974-8eeece0abeee][Formatação]]).
+- ~print!~ => o mesmo que ~format!~, mas o texto é impresso no console (~io::stdout~).
+- ~println!~ => o mesmo que o ~print!~, mas uma nova linha é adicionada.
+- ~eprint!~ => o mesmo que o ~print!~, mas o texto é impresso na saída de erro padrão (~io::stderr~).
+- ~eprintln!~ => o mesmo que o ~eprint!~, mas uma nova linha é adicionada.
+
+** print!
+Escreverá o texto na saída padrão, mas dará pânico caso escrever na ~io::stdout()~ falhe.
+
+#+begin_src rust :results output
+print!("Hello, World!");
+print!("Hello again!");
+#+end_src
+
+#+RESULTS:
+: Hello, World!Hello again!
+
+Essa macro vai bloquear a saída padrão a cada chamada. Se você chamar ~print!~ dentro de um loop, esse comportamento pode gerar atrasos.
+
+Para evitar este problema, bloqueie a stdout usando ~io::stdout().lock()~:
+
+#+begin_src rust :results output
+use std::io::{stdout, Write};
+
+let mut lock = stdout().lock();
+write!(lock, "Hello, World!").unwrap();
+#+end_src
+
+#+RESULTS:
+: Hello, World!
+
+** println!
+Escreverá o texto na saída padrão, mas dará pânico caso escrever na ~io::stdout()~ falhe.
+
+#+begin_src rust :results output
+println!("Hello, World!");
+println!("Hello again!");
+#+end_src
+
+#+RESULTS:
+: Hello, World!
+: Hello again!
+
+Essa macro vai bloquear a saída padrão a cada chamada. Se você chamar ~println!~ dentro de um loop, esse comportamento pode gerar atrasos.
+
+Para evitar este problema, bloqueie a stdout usando ~io::stdout().lock()~:
+
+#+begin_src rust :results output
+use std::io::{stdout, Write};
+
+let mut lock = stdout().lock();
+writeln!(lock, "Hello, World!").unwrap();
+#+end_src
+
+#+RESULTS:
+: Hello, World!
+
+** eprint!
+Mesmo caso que o ~print!~, porém, utilizará a ~io::stderr~ ao invés da ~io::stdout~.
+
+#+begin_src rust :results silent
+eprint!("Hello, World!");
+#+end_src
+
+Utilize apenas para mensagens de erro e progresso.
+
+** eprintln!
+Mesma coisa que o ~println!~, porém, utilizará a ~io::stderr~ ao invés da ~io::stdout~.
+
+Utilize apenas para mensagens de erro e progresso.
+
+* Utilidades
+- Para limpar a stdout, você pode usar ~io::stdout().flush().unwrap()~
+- Para limpar a stderr, você pode usar ~io::stderr().flush().unwrap()~

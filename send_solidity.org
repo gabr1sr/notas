@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       052133b1-0ad7-4b98-ad6b-492c641c8453
+:END:
+#+TITLE: Send (Solidity)
+#+DATE: 2023-09-11
+#+FILETAGS: solidity syntax transfer
+
+- tags :: [[id:b544e43d-b9b0-419b-99c5-f895744b50c0][Transferindo ETH (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/#eth-transfers][Digging deeper into Solidity's syntax]]
+
+Podemos transferir ETH usando a função ~send~, mas não é uma opção recomendada, pois só pode gastar até 2300 gas para transferir ETH e, por mais que a execução falhe, ela não irá dar erro, apenas irá retornar ~false~.
+
+#+BEGIN_SRC solidity
+  contract SenderContract {
+    function sendEther(address payable to) public payable {
+	bool sent = to.send(msg.value);
+	require(sent, "Failed to send ETH");
+      }
+    }
+#+END_SRC

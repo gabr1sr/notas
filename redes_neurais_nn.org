@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       a0562591-c3fe-4071-9f52-01888deeb5d0
+:END:
+#+title: Redes Neurais (NN)
+#+date: [2023-11-28 ter 12:38]
+#+filetags: :ai:ml:nn:
+- tags :: [[id:4300010e-271a-418a-ac6d-c526723bf582][Aprendizado de Máquina (ML)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/introduction-to-ai/][Introduction to AI]]
+
+NN é uma sigla para Redes Neurais (Neural Networks).
+
+Ela é um subcampo do Aprendizado de Máquina.
+
+Redes neurais são modelos de computadores que são inspirados em como nosso cérebro funciona. Eles são feitos de pequenas unidades chamadas neurônios (como no cérebro) que se conectam entre si.
+
+Esses neurônios recebem entradas, processam elas e produzem saídas.
+
+Durante o processo de aprendizado, a rede ajusta suas conexões para se tornarem melhores em suas tarefas.
+
+Ela faz isso comparando suas previsões com as respostas corretas e fazendo pequenas alterações em suas conexões para chegarem mais perto da resposta correta. Algo parecido com o aprender com exemplos.
+
+* Camadas
+As redes neurais têm diferentes camadas. Cada uma delas é responsável por tarefas específicas.
+
+** Primeira Camada
+A primeira camada é a que recebe a entrada, como números ou imagens.
+
+** Camada do Meio
+As camadas do meio, ou camadas escondidas, processam a informação.
+
+** Camada Final
+A camada final mostra a saída, ou resultado, que pode ser uma previsão ou uma decisão.
+
+* Arquiteturas
+- [[id:5bcbaf54-f776-4ef7-81f4-fefa86f0d094][Transformadores (AI)]]
+
+* Subcampos
+- [[id:42322fd7-bf34-4a3c-80b4-8683f517db15][Deep Learning (DL)]]

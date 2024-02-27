@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       c44d0c56-9232-4ba8-b679-b1e2af19a786
+:END:
+#+title: Inferência de Tipos (Rust)
+#+date: [2023-11-12 dom 00:00]
+#+filetags: :rust:type:inference:
+- tags :: [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/rust-by-example/types/inference.html][Inference - Rust By Example]]
+
+A inferência de tipos, na linguagem Rust, acontece quando você declara uma variável e o tipo dela é deduzido conforme ela é utilizada no seu código.
+
+Exemplo:
+
+#+begin_src rust-ts
+let mut inferred_type = 12;
+
+// ...
+
+inferred_type = 4294967296i64;
+#+end_src
+
+Podemos observar que não definimos o tipo da variável ~inferred_type~ em sua declaração.
+
+Como mais abaixo alteramos seu valor para ~4294967296~ e declaramos o tipo através de sufixo ~i64~, a variável não será declarada com o tipo padrão para números inteiros (~i32~), mas sim o tipo ~i64~ que foi inferido de algumas linhas abaixo da declaração da variável.

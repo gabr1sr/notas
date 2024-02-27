@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       d9b5501e-609d-47f1-b7b1-ab28c8c022f0
+:END:
+#+title: Aprendizado de Máquina Semi Supervisionado
+#+date: [2023-11-28 ter 12:35]
+#+filetags: :ai:ml:semi_supervisioned:
+- tags :: [[id:4300010e-271a-418a-ac6d-c526723bf582][Aprendizado de Máquina (ML)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/introduction-to-ai/][Introduction to AI]]
+
+É o tipo de Aprendizado de Máquina que combina dados rotulados e não rotulados para treinar o algoritmo.
+
+Ele usa um pequeno conjunto de dados rotulados para guiar o processo de aprendizagem para um conjunto maior de dados não rotulados.
+
+Isso ajuda muito quando não temos dados rotulados suficientes ou rotular é uma tarefa cara e trabalhosa.

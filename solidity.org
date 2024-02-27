@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       2411f6c4-d357-4d4f-aa93-28c6770b5bd0
+:END:
+#+TITLE: Solidity
+#+DATE: 2023-09-06
+#+FILETAGS: solidity
+
+- tags :: [[id:3e748f27-e779-4a92-b63d-f107ea307b75][Contratos Inteligentes]], [[id:6c4e6149-1323-48b7-a121-4c7a75d248a7][Ethereum Virtual Machine]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]], [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/][Digging deeper into Solidity's syntax]]
+
+Solidity é uma linguagem de programação utilizada para escrever Contratos Inteligentes para a Ethereum Virtual Machine.

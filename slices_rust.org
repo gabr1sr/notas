@@ -1,0 +1,154 @@
+:PROPERTIES:
+:ID:       fa674c77-1a1a-45b6-9b46-cf2a5b017d75
+:END:
+#+title: Slices (Rust)
+#+date: [2023-11-15 qua 17:39]
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]], [[https://doc.rust-lang.org/book/ch04-03-slices.html][The Slice Type - The Rust Programming Language]], [[https://doc.rust-lang.org/rust-by-example/primitives/array.html][Arrays and Slices - Rust By Example]]
+
+Slices são um tipo que permitem referenciar uma sequência contígua de elementos em uma coleção ao invés de referenciar a coleção inteira.
+
+Sua assinatura de tipo é: ~&[T]~.
+
+* Declaração
+Quando queremos obter parte de uma string ou array, podemos especificar o range de quais elementos queremos obter dessa coleção.
+
+Exemplos:
+
+** Slice de String
+Temos uma String ~"Hello World"~ e queremos dividi-la em 2 slices:
+- ~hello~ => um slice contendo a palavra ~"Hello"~
+- ~world~ => outro slice contendo a palavra ~"World"~
+
+Podemos fazer isto desta forma:
+
+#+begin_src rust :noweb yes :results verbatim
+let s = String::from("Hello World");
+let hello = &s[0..5];
+let world = &s[6..11];
+
+<<show_string_results>>
+#+end_src
+
+#+RESULTS:
+: s = "Hello World"
+: hello = "Hello"
+: world = "World"
+
+Podemos também criar um slice de string de forma direta:
+
+#+begin_src rust :results verbatim
+let slice1 = "Hello, World!";
+
+println!("slice1 = {:?}", slice1);
+#+end_src
+
+#+RESULTS:
+: slice1 = "Hello, World!"
+
+** Slice de Array
+Temos um array ~[1, 2, 3, 4, 5]~ e queremos dividi-lo em 2 slices:
+- ~y~ => um slice contendo os elementos ~[1, 2, 3]~
+- ~z~ => outro slice contendo os elementos ~[4, 5]~
+
+Realizamos esta ação assim:
+
+#+begin_src rust :noweb yes :results verbatim
+let xs: [i32; 5] = [1, 2, 3, 4, 5];
+let y = &xs[..3];
+let z = &xs[3..];
+
+<<show_array_results>>
+#+end_src
+
+#+RESULTS:
+: xs = [1, 2, 3, 4, 5]
+: y = [1, 2, 3]
+: z = [4, 5]
+
+Podemos também criar um slice de array de forma direta:
+
+#+begin_src rust :results verbatim
+let slice1 = &[2, 3];
+
+println!("slice1 = {:?}", slice1);
+#+end_src
+
+#+RESULTS:
+: slice1 = [2, 3]
+
+* Ranges
+Os ranges podem ser especificados utilizando a síntaxe de range ~..~ para definir quais elementos da coleção estarão no slice.
+
+** De um ponto específico até outro ponto específico
+Se quisermos pegar o elemento da posição ~x~ até a posição ~y~ de uma coleção (~&[x..y]~), fazemos da seguinte forma:
+
+#+begin_src rust :noweb yes :results verbatim
+let collection = String::from("Hello World!");
+
+let x = 0;
+let y = 5;
+
+let slice1 = &collection[x..y];
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: collection = "Hello World!"
+: slice1 = "Hello"
+
+** De um ponto específico até o final
+Se quisermos pegar o elemento da posição ~x~ até a posição final de uma coleção (~&[x..]~), fazemos da seguinte forma:
+
+#+begin_src rust :noweb yes :results verbatim
+let collection = String::from("Hello World!");
+
+let x = 6;
+
+let slice1 = &collection[x..];
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: collection = "Hello World!"
+: slice1 = "World!"
+
+** Do começo até um ponto específico
+Se quisermos pegar o elemento da posição inicial até a posição ~x~ de uma coleção (~&[..x]~), fazemos da seguinte forma:
+
+#+begin_src rust :noweb yes :results verbatim
+let collection = String::from("Hello World!");
+
+let x = 5;
+
+let slice1 = &collection[..x];
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: collection = "Hello World!"
+: slice1 = "Hello"
+
+* Códigos
+#+name: show_string_results
+#+begin_src rust :exports code
+println!("s = {:?}", s);
+println!("hello = {:?}", hello);
+println!("world = {:?}", world);
+#+end_src
+
+#+name: show_array_results
+#+begin_src rust :exports code
+println!("xs = {:?}", xs);
+println!("y = {:?}", y);
+println!("z = {:?}", z);
+#+end_src
+
+#+name: show_results
+#+begin_src rust :exports code
+println!("collection = {:?}", collection);
+println!("slice1 = {:?}", slice1);
+#+end_src

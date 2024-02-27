@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       2f18a3d3-9834-4fcf-beb1-76ac557af103
+:END:
+#+title: Loop (Rust)
+#+date: [2024-02-26 Mon 18:20]
+- tags :: [[id:5a70fb7b-8198-4f96-bd42-296a23b986bd][Controle de Fluxo (Rust)]]
+- source :: [[https://google.github.io/comprehensive-rust/pt-BR/control-flow-basics/loops/loop.html][loop]], [[https://doc.rust-lang.org/reference/expressions/loop-expr.html#infinite-loops][Infinite loops]], [[https://doc.rust-lang.org/stable/rust-by-example/flow_control/loop.html][loop - Rust By Example]]
+
+A palavra-chave ~loop~ é utilizada para criar loops infinitos.
+
+Esses loops infinitos são executados para sempre ou até um ~break~ o interromper.
+
+#+begin_src rust
+let mut i = 0;
+
+loop {
+    i += 1;
+    println!("{i}");
+    if i > 10 {
+        break; 
+    }
+}
+#+end_src
+
+#+RESULTS:
+#+begin_example
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+#+end_example
+
+* Rótulos
+Podemos colocar rótulos nesses loops:
+
+#+begin_src rust
+'outer: loop {
+    println!("Hello!");
+
+    'inner: loop {
+        println!("Hello again!");
+
+        break 'outer;
+    }
+}
+#+end_src
+
+#+RESULTS:
+: Hello!
+: Hello again!

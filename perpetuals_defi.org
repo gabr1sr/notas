@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       d61fe0f0-a829-4fbe-920a-f0186e2e99f2
+:END:
+#+title: Perpetuals (DeFi)
+#+date: [2023-11-20 seg 09:38]
+- tags :: [[id:13a64c0b-7ad8-41d3-97d3-73dc9d49a5fc][Finanças Descentralizadas (DeFi)]]
+- source :: [[https://guardianaudits.notion.site/Principles-Of-Testing-Smart-Contracts-4f3a77f6170147b6a07d5eef56c49bf0][Mission #1 - Perpetuals]], [[https://www.youtube.com/watch?v=DRZogmD647U&t=11268s][Advanced DeFi, Perpetuals Intro]]
+
+Perpetuals são uma forma de apostar no preço de um determinado token sem realmente comprar o token, enquanto o trader emprega alavancagem (employ leverage).
+
+* Por que o nome?
+Perpetuals são chamadoes desta forma porque o trader pode manter sua posição "perpétua" aberta pelo tempo que quiser ou perpetuamente.
+
+* O que é uma posição?
+Podemos dizer que uma posição é uma aposta que o trader tem em aberto.
+
+Uma posição é composta por:
+- **Tamanho** - quanto capital "virtual" o trader está comandando.
+  - Se uma posição é aberta em 1.5 BTC, se o preço subir, o trader consegue lucrar em cima dos 1.5 BTC.
+- **Colateral** - a quantidade de ativos utilizados para cobrir a posição do trader.
+  - Quando o trader perde dinheiro, essa perda é descontada do colateral.
+  - Se o colateral é insuficiente para cobrir as perdas, a posição é liquidada ou forçada a ser fechada.
+
+O ~tamanho / colateral~ é a alavancagem (leverage) de uma posição.
+
+Se uma posição é aberta com $10k de USDC como colateral e tamanho de $20k de BTC, minha alavancagem é de 2x.
+
+* Direções de posição
+Existem 2 tipos diferentes de direções que uma posição perpétua pode ter:
+- [[id:065d3e78-5143-4482-ab8d-bfe3c496d590][Posição Longa (Perpetuals)]]
+- [[id:994433a7-3bc5-4b96-8906-91d14170b262][Posição Curta (Perpetuals)]]

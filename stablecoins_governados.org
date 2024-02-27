@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c2fd8abe-0532-4f95-915d-755399d13063
+:END:
+#+title: Stablecoins Governados
+#+date: [2023-11-28 ter 13:26]
+- tags :: [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+
+É quando a intervenção humana é responsável por fazer minting e burning do stablecoin, afim de manter sua estabilidade.

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       5b0ea67f-8784-4fe0-888a-1445ffa48952
+:END:
+#+title: Matemática
+#+date: [2023-11-28 ter 13:41]
+- tags ::
+- source :: [[https://brasilescola.uol.com.br/matematica][Matemática (Brasil Escola)]]
+
+É uma ciência que utiliza conceitos e técnicas para a formação de conhecimentos abstratos e concretos. Estuda números e operações, formas geométricas, medidas, interpretação de dados, estudo de variação, raciocínio lógico, entre outros.
+
+* Assuntos
+- [[id:af388f3d-da8c-4dbf-baca-6335c64a290e][Ciência da Computação]]
+- [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       6c7fd246-3500-487d-9e14-374e1417f8f4
+:END:
+#+title: Tipos Básicos (Solidity)
+#+date: [2023-09-26 ter 04:30]
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://github.com/Cyfrin/foundry-full-course-f23#basic-solidity-types][Basic Solidity: Types]]
+
+Esses são os tipos básicos da linguagem Solidity:
+- [[id:a3d4154a-4ffe-497c-9126-fee5cf4af7c1][Boolean (Solidity)]]
+- [[id:531fb206-728f-4d0a-88f6-a3266a9fa600][Uint (Solidity)]]
+- [[id:2868a913-486b-469a-9c28-fecf85d51b09][Int (Solidity)]]
+- [[id:6a68a738-1c70-4771-b1a6-5abf960af51d][Address (Solidity)]]
+- [[id:827bb862-e40e-4ff2-8565-ec129098516a][Bytes (Solidity)]]
+- [[id:57281758-b616-430d-b875-bde0f5eea2dc][String (Solidity)]]

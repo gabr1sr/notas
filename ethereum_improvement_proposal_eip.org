@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4f639073-a136-4c6d-95ee-ad7d1b13f000
+:END:
+#+title: Ethereum Improvement Proposal (EIP)
+#+date: [2024-01-15 seg 03:39]
+- tags :: [[id:32e979d8-28bc-4eea-b3dd-b8fe9bfbab0c][Ethereum]]
+- source :: [[https://updraft.cyfrin.io/courses/advanced-foundry/How-to-create-an-erc20-crypto-currency/erc-and-erc20-fundamentals?lesson_format=video][Introduction to ERC fundamentals and ERC20 - Updraft Cyfrin]], [[https://eips.ethereum.org/][Ethereum Improvement Proposals]]
+
+EIPs são propostas de melhorias para a Ethereum, que descrevem padrões, sendo eles:
+- Padrões de Contratos Inteligentes
+- Especificações do Protocolo Ethereum (Core)
+- APIs do cliente
+- [[id:05e1cdaa-6152-4b18-adcc-e4e302add99a][Ethereum Request for Comments (ERC)]]
+- Entre outros
+
+Veja mais em: https://eips.ethereum.org/

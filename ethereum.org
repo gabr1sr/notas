@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       32e979d8-28bc-4eea-b3dd-b8fe9bfbab0c
+:END:
+#+title: Ethereum
+#+date: 2023-09-06
+#+filetags: :blockchain:layer1:ethereum:
+
+- tags :: [[id:15fbd8e6-b0af-4e9b-bd98-0d35ce0b3ef1][Blockchain Layer-1]], [[id:3e748f27-e779-4a92-b63d-f107ea307b75][Contratos Inteligentes]], [[id:6c4e6149-1323-48b7-a121-4c7a75d248a7][Ethereum Virtual Machine]]
+- source :: [[https://ethereum.org/en/whitepaper/][Ethereum Whitepaper]]
+
+É uma blockchain que popularizou o uso de contratos inteligentes através da linguagem de programação Solidity.
+
+* Características
+- [[id:82ddf7b3-02cf-42fd-9f2c-1dfc6ed4a73c][Ether (Criptomoeda)]]
+- [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- [[id:90d3e59b-94fa-4850-8550-e6c3bfd22800][Mempool (Ethereum)]]
+  

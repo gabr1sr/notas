@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       23a3544c-2f43-427e-bdd7-0dfe253fcc1e
+:END:
+#+title: Sandwich Attack (Solidity)
+#+date: [2023-11-21 ter 06:57]
+- tags :: [[id:6911c4bd-108e-445d-bb96-b1f44ba32dd7][Ataques de Ultrapassagem (Solidity)]]
+- source :: [[https://www.youtube.com/watch?v=DRZogmD647U&t=18561s][Sandwich Attacks (YT)]]
+
+Sandwich Attack ou Ataque Sanduíche é um tipo de ataque que:
+- Combina front-running e back-running.
+- Tira vantagem copiando uma transação, alterando uma variável e executando-na antes dessa transação.
+- E cria outra transação logo após a transação que foi copiada.
+
+* Exemplo
+Uma liquidity pool tem 400 Token A e 200 Token B.
+
+Um usuário deseja fazer swap de 50 Token B.
+
+O usuário malicioso, que performa o sandwich attack, copia essa transação, adiciona mais gás para ultrapassar a transação do outro usuário e faz swap de 100 Token B ao invés de 50 Token B.
+
+O valor do Token B na liquidity pool aumenta e o valor de Token A que o primeiro usuário recebe será menor do que o esperado.
+
+A transação do usuário malicioso acontece primeiro e a do primeiro usuário acontece logo após.
+
+O usuário malicioso vai e faz swap do Token A para o Token B e recebe mais Token B do que ele trocou anteriormente.
+
+O primeiro usuário sofre prejuízo.
+
+* Mitigação
+Adicionar % de slippage.
+
+Usar Flashbots para não tomar frontrun.

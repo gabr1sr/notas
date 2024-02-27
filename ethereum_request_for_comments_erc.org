@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       05e1cdaa-6152-4b18-adcc-e4e302add99a
+:END:
+#+title: Ethereum Request for Comments (ERC)
+#+date: [2024-01-15 seg 03:45]
+- tags :: [[id:4f639073-a136-4c6d-95ee-ad7d1b13f000][Ethereum Improvement Proposal (EIP)]]
+- source :: [[https://updraft.cyfrin.io/courses/advanced-foundry/How-to-create-an-erc20-crypto-currency/erc-and-erc20-fundamentals?lesson_format=video][Introduction to ERC fundamentals and ERC20 - Updraft Cyfrin]], [[https://eips.ethereum.org/][Ethereum Improvement Proposals]]
+
+ERCs são propostas de melhorias para a Ethereum que estão em fase de avaliação/construção ou já foram implementadas.
+
+* ERCs
+- [[id:0a0d01e1-0296-414d-aa30-7dc182d1b2c0][Token Standard (ERC-20)]]

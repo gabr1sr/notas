@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       5474a312-7597-446d-b11d-45778ef037f5
+:END:
+#+title: Como Escrever Relatórios de Auditoria
+#+date: [2023-11-21 ter 07:48]
+- tags :: [[id:810f9948-5eb6-4c87-9aa8-91f79fdc0533][Auditoria]]
+- source :: [[https://www.youtube.com/watch?v=DRZogmD647U&t=19766s][How To Write A Stellar Finding Report (YT)]], [[https://docs.codehawks.com/hawks-auditors/how-to-evaluate-a-finding-severity][How to Evaluate a Finding Severity (CodeHawks)]]
+
+* Por que é importante escrever bons relatórios?
+- Para ganhar os juízes que irão avaliar os relatórios na competição
+- Para ser o relatório selecionado
+- Convencer o protocolo a ser arrumado
+
+* Componentes de um bom relatório
+- Causa-raíz clara
+- Impacto claro
+- Curto e bem-explicado (sucinto)
+- Ônus de prova (de preferência Proof of Concept)
+
+* Severidade
+Podemos determinar a severidade a partir de 2 pontos: probabilidade e impacto.
+
+| Probabilidade | Impacto | Severidade    |
+|---------------+---------+---------------|
+| Alta          | Alto    | Alta          |
+| Alta          | Médio   | Alta / Média  |
+| Alta          | Baixo   | Média         |
+| Média         | Alto    | Alta / Média  |
+| Média         | Médio   | Média         |
+| Média         | Baixo   | Média / Baixa |
+| Baixa         | Alto    | Média         |
+| Baixa         | Médio   | Média / Baixa |
+| Baixa         | Baixo   | Baixa         |
+
+* Dicas
+- Título: <causa-raíz> + <impacto>

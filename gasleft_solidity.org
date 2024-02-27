@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       428dab5a-e061-4f20-ab81-8dec1c940faa
+:END:
+#+title: Gasleft (Solidity)
+#+date: [2023-12-13 qua 14:29]
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://updraft.cyfrin.io/courses/foundry/foundry-fund-me/calculate-solidity-function-gas-costs?lesson_format=video][Updraft Cyfrin | Calculate Withdraw gas costs]]
+
+Podemos utilizar a função ~gasleft()~ em Solidity para calcular o gas utilizado em alguma função.
+
+Exemplo:
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract GasleftExample {
+    uint256 value = 123;
+
+    function setValue(uint256 newValue) public {
+	value = newValue;
+    }
+
+    function trackSetValue(uint256 newValue) public returns (uint256) {
+	uint256 gasStart = gasleft();
+	setValue(newValue);
+	uint256 gasEnd = gasleft();
+	return (gasStart - gasEnd) * tx.gasprice;
+    }
+}
+#+end_src

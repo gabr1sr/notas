@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       87472b95-afbc-41ff-b69d-0fc923fedfa0
+:END:
+#+title: Potência de um Produto (Exponenciação)
+#+date: [2023-11-26 dom 07:21]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]], [[https://mundoeducacao.uol.com.br/matematica/propriedades-das-potencias.htm][Propriedades das Potências]]
+
+É uma regra da exponenciação onde:
+
+\begin{equation}
+\left( a \times b \right)^m = a^m \times b^m
+\end{equation}
+
+* Exemplo
+\begin{equation}
+\left( 5 \times 7 \right)^3 = 5^3 \times 7^3 = 125 \times 343 = 42875
+\end{equation}

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       6381faf6-ee5d-4b3e-9341-432397b95e68
+:END:
+#+title: Mineração (Blockchain)
+#+date: [2023-11-28 ter 13:15]
+- tags :: [[id:a45bc5b2-5098-4781-83c6-a02fadfc84cb][Nodes de Mineração (Blockchain)]]
+- source ::
+
+É o processo ao qual os Nodes de Mineração realizam uma computação extensa e difícil para calcular o hash do próximo bloco e poder propô-lo, ajudando a criar novos blocos e ganhando prêmios por realizar esse trabalho.
+
+É o processo de encontrar a "solução" para o "problema" da blockchain.

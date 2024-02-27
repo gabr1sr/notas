@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       eddfed7f-241c-4dcd-913f-b38132ddb385
+:END:
+#+TITLE: Detalhes Técnicos (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source ::
+
+Arquivo específico para indexação de anotações de detalhes técnicos sobre Solidity.
+
+- [[id:d2fe0549-7202-4dc6-8e8f-0229bdcf74fa][Representação de Funções (Solidity)]]

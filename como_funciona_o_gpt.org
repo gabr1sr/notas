@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       c3d96626-b0ec-4ecb-9ae0-e58964b170b4
+:END:
+#+title: Como Funciona o GPT
+#+date: [2023-11-28 ter 12:50]
+#+filetags: :ai:ml:nn:dl:transformers:gpt:
+- tags :: [[id:42322fd7-bf34-4a3c-80b4-8683f517db15][Deep Learning (DL)]], [[id:5bcbaf54-f776-4ef7-81f4-fefa86f0d094][Transformadores (AI)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/intro-to-large-language-models-llms/][Intro to Large Language Models (LLMs)]]
+
+GPT 3, 3.5 e 4 utilizam um modelo de Deep Learning que tem uma arquitetura de Transformador para entender e gerar texto humano. Ele é especificamente projetado para processar tarefas em linguagem natural.
+
+* Como funciona
+1. **pré-treinamento**:
+   - o GPT aprende usando uma grande quantidade de dados de texto, tipicamente retirados da internet.
+   - O modelo prevê a próxima palavra em uma frase a partir da palavra anterior.
+   - Esse processo ajuda o modelo a aprender os padrões estatísticos e relações do texto.
+
+2. **arquitetura de transformadores**:
+   - Essa arquitetura ajuda o GPT a entender melhor o contexto e as relações entre as palavras de uma frase.
+   - Os transformadores vão usar o mecanismo de attention para focar em palavras importantes e considerar as relações entre eles.
+
+3. **fine-tuning**:
+   - Depois do pré-treinamento, o GPT passa pelo processo de afinação, onde ele melhora em tarefas específicas para se tornar mais aplicável e utilizável.
+   - Esse processo envolve treinar o modelo em um conjunto mais específico com exemplos rotulados.
+   - Ele pode ser afinado, por exemplo, para tarefas como complementar texto, criar resumos ou responder questões.
+
+4. **geração**:
+   - Uma vez que o modelo é treinado e afinado, ele pode gerar texto baseado em um determinado prompt ou entrada.
+   - Ele usa seu conhecimento em padrões estatísticos e relações que aprendeu durante o pré-treinamento para gerar texto coerente e contextualmente relevante.

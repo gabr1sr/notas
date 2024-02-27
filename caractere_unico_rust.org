@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       faf9ce61-f30e-42b0-adb3-f3d3fd637a9f
+:END:
+#+title: Caractere Único (Rust)
+#+date: [2023-11-14 ter 06:44]
+#+filetags: :rust:type:primitive:char:
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+É um valor escalar Unicode. Ou seja, seu valor pode ser de ~0x000000~ até ~0x10FFFF~.
+
+O valor não pode ser um ponto de código substituto (valor entre ~0xD800~ e ~0xDFFF~).
+
+Todos os ~char~ ocupam 4 bytes (32 bits).
+
+* Declaração
+Podemos declarar das seguintes formas:
+
+#+begin_src rust :noweb yes :results verbatim
+let char1: char = 'A';
+let char2: char = '\u{0042}';
+let char3: char = char::from_u32(0x0043).unwrap();
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: char1 = 'A'
+: char2 = 'B'
+: char3 = 'C'
+
+
+* Códigos
+#+name: show_results
+#+begin_src rust :exports code
+println!("char1 = {:?}", char1);
+println!("char2 = {:?}", char2);
+println!("char3 = {:?}", char3);
+#+end_src

@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       59a68e87-bd6c-4e32-8d49-b8f7c20d01d7
+:END:
+#+title: Stablecoins
+#+date: [2023-11-28 ter 13:21]
+- tags :: [[id:afc06355-a18f-4b8a-be06-b217a776e4ac][Criptomoedas]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+- recommendations :: [[https://dirtroads.substack.com/p/-40-pruning-memes-algo-stables-are][Pruning Memes - "Algo Stables Are Dead"]], [[https://www.coindesk.com/learn/algorithmic-stablecoins-what-they-are-and-how-they-can-go-terribly-wrong/][Algorithmic Stablecoins: What They Are and How They Can Go Terribly Wrong]]
+
+Stablecoins são cripto ativos não voláteis, ou seja, um cripto ativo cujo poder de compra flutua bem pouco em relação ao restante do mercado, se mantendo relativamente o mesmo.
+
+Eles podem ser divididos pelas seguintes categorias e propriedades:
+
+* Tipos de  Estabilidade Relativa
+Na estabilidade relativa, algo é estável somente relacionado a outra coisa.
+- [[id:56aa1698-0dcd-4bcf-b54e-7299b65176db][Stablecoins Atrelados]]
+- [[id:a5dd49e9-a585-4cf0-b347-591201c4b493][Stablecoins Flutuantes]]
+
+* Métodos de Estabilidade
+São os mecanismos que mantêm o stablecoin estável.
+- [[id:c2fd8abe-0532-4f95-915d-755399d13063][Stablecoins Governados]]
+- [[id:ebda5a36-129f-44c8-9d3e-057b32f1c102][Stablecoins Algorítmicos]]
+
+* Tipos de Colateralização
+São os tipos de métodos utilizados para dar valor ao stablecoin.
+- [[id:75913621-f683-4096-adc9-a84bfba84c74][Colateralização Exógena]]
+- [[id:5b822bb6-7bbb-4b38-be9b-4e4601926d7d][Colateralização Endógena]]

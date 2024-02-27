@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       c22c2bb1-1593-4233-a2be-70f09355e55c
+:END:
+#+title: Override (Solidity)
+#+date: [2023-12-08 sex 09:07]
+- tags :: [[id:f87049ce-6295-48c6-9ea4-9b1d73df99bc][Funções (Solidity)]]
+- source :: [[https://docs.soliditylang.org/en/latest/contracts.html#function-overriding][Solidity Docs | Function Overriding]]
+
+A palavra-chave ~override~ é um modificador utilizado para sobrescrever funções ou modificadores.
+
+Funções ou modificadores sobrescritos devem ter sido declarados usando a palavra-chave [[id:cbe8c0fe-1f21-4237-9514-4e74ac816601][Virtual (Solidity)]].
+
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract VirtualExample {
+    address owner;
+    
+    modifier onlyOwner() virtual {
+	require(msg.sender == owner);
+	_;
+    }
+
+    function transferOwnership(address newOwner) external virtual onlyOwner {
+	owner = newOwner;
+    }
+}
+
+contract OverrideExample is VirtualExample {
+    modifier onlyOwner() override {
+	require(msg.sender == owner && owner != address(0));
+	_;
+    }
+
+    function transferOwnership(address newOwner) external override onlyOwner {
+	require(newOwner != address(0));
+	owner = newOwner;
+    }
+}
+#+end_src
+
+#+begin_src solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.6.0 <0.9.0;
+
+contract Base1 {
+    function foo() virtual public {}
+}
+
+contract Base2 {
+    function foo() virtual public {}
+}
+
+contract Inherited is Base1, Base2 {
+    function foo() public override(Base1, Base2) {}
+}
+#+end_src

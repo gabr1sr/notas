@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       9ecf13ad-f610-4679-a780-8d4751fc37db
+:END:
+#+TITLE: Private (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:bf19d622-fb59-4ed3-94b6-fea51f52eba9][Tipos de Visibilidade (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/senior/access-private-data-in-smart-contracts/][Access private data in smart contracts]]
+
+Modificador de visibilidade para funções e variáveis que faz com que ela possa ser chamada e modificada apenas pelo contrato em que ela está.
+
+#+BEGIN_SRC solidity
+  contract PrivateExample {
+      // Esta é uma variável privada
+      uint256 private _value;
+
+      // Esta é uma função privada
+      function _getValue() private view returns (uint256) {
+	  return _value;
+      }
+  }
+#+END_SRC

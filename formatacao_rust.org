@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       cbe7e407-21a5-4ea3-8974-8eeece0abeee
+:END:
+#+title: Formatação (Rust)
+#+date: [2023-11-12 dom 07:58]
+#+filetags: :rust:macro:format:
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/hello/print.html][Formatted print - Rust By Example]], [[https://doc.rust-lang.org/std/fmt/][std::fmt Module]]
+
+No Rust, podemos utilizar a macro ~format!~ para usar interpolação de expressões em tempo de execução.
+
+* Flags e Traits de Formatação
+- /vazio/ => ~std::fmt::Display~
+- ~?~ => ~std::fmt::Debug~ (precisa usar o atributo ~derive~ para ~struct~)
+- ~x?~ => ~std::fmt::Debug~ com hexadecimais em minúsculo
+- ~X?~ => ~std::fmt::Debug~ com hexadecimais em maiúsculo
+- ~o~ => ~std::fmt::Octal~
+- ~x~ => ~std::fmt::LowerHex~
+- ~X~ => ~std::fmt::UpperHex~
+- ~p~ => ~std::fmt::Pointer~
+- ~b~ => ~std::fmt::Binary~
+- ~e~ => ~std::fmt::LowerExp~
+- ~E~ => ~std::fmt::UpperExp~
+
+* Tipos de Formatação
+- [[id:121cad52-9896-4c25-b332-020d6c3c316b][Formatação Debug (Rust)]]
+- [[id:452af675-020c-4e5b-9eeb-a886119135be][Formatação Display (Rust)]]
+
+* Utilizado Por
+- [[id:0d87efeb-fa6f-4d7e-a963-6d03284757c4][Printing (Rust)]]

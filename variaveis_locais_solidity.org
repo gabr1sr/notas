@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       acc0df32-3b7b-45ef-885c-0985eae228f3
+:END:
+#+TITLE: Variáveis Locais (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:c79bb7b0-b848-42ab-b9f2-9e0ac690237e][Tipos de Variáveis (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]]
+
+Variáveis que são declaradas dentro de uma função e não são guardadas na blockchain.

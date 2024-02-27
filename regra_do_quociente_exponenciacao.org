@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       a1bc1f69-437a-4b44-8235-5c7285e06555
+:END:
+#+title: Regra do Quociente (Exponenciação)
+#+date: [2023-11-26 dom 06:54]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]]
+
+É uma regra da expoenciação onde:
+
+\begin{equation}
+\frac{a^m}{a^n} = a^{m-n}
+\end{equation}
+
+* Exemplo
+
+\begin{equation}
+\frac{3^6}{3^2} = 3^{6-2} = 3^4
+\end{equation}

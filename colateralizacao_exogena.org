@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       75913621-f683-4096-adc9-a84bfba84c74
+:END:
+#+title: Colateralização Exógena
+#+date: [2023-11-28 ter 13:29]
+- tags :: [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+
+É quando a colateralização do criptoativo é originado de fora do protocolo.
+
+Nela, o valor de mercado do criptoativo só pode ser tão alto quanto o da quantidade de colateral que ele tem.
+
+* Como identificar
+Se por algum acaso o criptoativo falir, a colateralização não vai falir junto com ele.

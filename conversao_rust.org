@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       1881cbde-ea1b-4b05-8e21-1d752db63b68
+:END:
+#+title: Conversão (Rust)
+#+date: [2024-01-15 seg 00:30]
+#+filetags: :rust:conversion:
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/conversion.html][Conversion - Rust By Example]]
+
+Existem diferentes formas de converter tipos em Rust:
+- [[id:74cbf448-7384-4b3b-a09a-99707980fa0b][Casting (Rust)]] => converte um tipo primitivo para outro tipo primitivo
+- [[id:500c4b1e-ff18-415e-9b98-c83ac457f553][From (Rust)]] e [[id:2c494800-b766-4d9a-a455-b4def0fcef35][Into (Rust)]] => traits para converter um valor para outro
+- [[id:3d8ca8ce-9369-4ef2-a22c-ab6dd7f11ea4][TryFrom (Rust)]] e [[id:4d4f1443-0df5-4904-96fb-b7b6a4b80a21][TryInto (Rust)]] => traits para converter um valor para outro (pode falhar)
+- [[id:a3c9916f-c6e9-4776-a385-7c3b0320ce6f][Convertendo Strings (Rust)]] => convertendo de e para Strings

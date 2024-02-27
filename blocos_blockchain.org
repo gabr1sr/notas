@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       ad539989-2434-4a7d-a702-1db7e422ce85
+:END:
+#+title: Blocos (Blockchain)
+#+date: [2023-11-28 ter 13:06]
+#+filetags: :blockchain:blocks:
+- tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
+- source :: [[https://learnweb3.io/courses/9a3fafe4-b5eb-4329-bdef-97b2aa6aacc1/lessons/ce29b763-054c-4a19-bca8-dba1e55a6e52][LearnWeb3 DAO | What is a blockchain?]]
+
+Blocos são estruturas de dados que agrupam transações e dados, que foram verificados e gravados pelos Nodes da rede através de um processo chamado de [[id:c62228b8-9da3-4da5-aa4a-19c6bc7c23f2][Consenso]], para serem incluídos em uma Blockchain.
+
+Cada bloco contém pelo menos 2 hashs criptográficos:
+1. hash para servir de identificação única desse bloco;
+2. hash do bloco anterior, para manter um histórico rastreável.
+
+Além disso, cada bloco representa um estado em que a blockchain está ou já esteve. O primeiro estado (ou bloco) é chamado de [[id:fd7e5153-ac4b-443e-aca3-8d14d93c0fa5][Bloco Gênese (Blockchain)]].
+
+É uma lista de transações mineradas juntas.

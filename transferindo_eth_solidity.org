@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       b544e43d-b9b0-419b-99c5-f895744b50c0
+:END:
+#+TITLE: Transferindo ETH (Solidity)
+#+DATE: 2023-09-07
+#+FILETAGS: solidity syntax transfer
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/#eth-transfers][Digging deeper into Solidity's syntax]], [[https://solidity-by-example.org/sending-ether/][Sending Ether (transfer, send, call)]]
+
+Existem 3 formas de transferir ETH de um contrato para outro endereço. Entretanto, 2 delas não são métodos recomendados:
+- [[id:052133b1-0ad7-4b98-ad6b-492c641c8453][método send]]
+- [[id:78b703a7-ed5b-43fc-9097-eae8b21734cd][método transfer]]
+
+E 1 delas é a forma atualmente recomendada:
+- [[id:be5f7940-66f5-4cba-adf7-1ef70b52769f][método call]]

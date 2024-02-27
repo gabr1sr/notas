@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       a3d4154a-4ffe-497c-9126-fee5cf4af7c1
+:END:
+#+title: Boolean (Solidity)
+#+date: [2023-09-26 ter 04:33]
+- tags :: [[id:6c7fd246-3500-487d-9e14-374e1417f8f4][Tipos Básicos (Solidity)]]
+- source :: [[https://github.com/Cyfrin/foundry-full-course-f23#basic-solidity-types][Basic Solidity: Types]]
+
+Em Solidity, valores boleanos são definidos com a palavra-chave ~bool~ e seu valor pode ser apenas ~true~ ou ~false~.
+
+#+begin_src solidity
+// SPDX-License-Identifier: GPLv3
+pragma solidity ^0.8.21;
+
+contract BooleanExample {
+    bool trueValue = true;
+    bool falseValue = false;
+    bool defaultFalseValue;
+
+    function boolFunction() public pure returns (bool) {
+	return true;
+    }
+}
+#+end_src

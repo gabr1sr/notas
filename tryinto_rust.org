@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       4d4f1443-0df5-4904-96fb-b7b6a4b80a21
+:END:
+#+title: TryInto (Rust)
+#+date: [2024-01-15 seg 01:10]
+- tags :: [[id:1881cbde-ea1b-4b05-8e21-1d752db63b68][Conversão (Rust)]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/conversion/try_from_try_into.html][TryFrom and TryInto - Rust By Example]]
+
+É um ~trait~ genérico para converter entre tipos, similar ao [[id:2c494800-b766-4d9a-a455-b4def0fcef35][Into (Rust)]].
+
+Porém, o ~TryInto~ é utilizado para conversões que possam falhar.
+
+Sendo assim, ele retorna ~Result~.
+
+#+begin_src rust
+use std::convert::TryFrom;
+use std::convert::TryInto;
+
+#[derive(Debug, PartialEq)]
+struct EvenNumber(i32);
+
+impl TryFrom<i32> for EvenNumber {
+    type Error = ();
+
+    fn try_from(value: i32) -> Result<Self, Self::Error> {
+        if value % 2 == 0 {
+            Ok(EvenNumber(value))
+        } else {
+            Err(())
+        }
+    }
+}
+
+fn main() {
+    let result: Result<EvenNumber, ()> = 8i32.try_into();
+    assert_eq!(result, Ok(EvenNumber(8)));
+
+    let result: Result<EvenNumber, ()> = 5i32.try_into();
+    assert_eq!(result, Err(()));
+
+    println!("Everything ok!");
+}
+#+end_src
+
+#+RESULTS:
+: Everything ok!

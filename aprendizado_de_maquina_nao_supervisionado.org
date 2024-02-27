@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       0b06bd3e-8e1b-42f2-904d-10eba7866c21
+:END:
+#+title: Aprendizado de Máquina Não Supervisionado
+#+date: [2023-11-28 ter 12:34]
+#+filetags: :ai:ml:not_supervisioned:
+- tags :: [[id:4300010e-271a-418a-ac6d-c526723bf582][Aprendizado de Máquina (ML)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/introduction-to-ai/][Introduction to AI]]
+
+É o tipo de Aprendizado de Máquina onde o algoritmo analisa os dados sem nenhum rótulo. Ele procura por padrões e cria agrupamentos por conta própria.
+
+Esse tipo de aprendizagem é útil para tarefas como explorar dados, encontrar itens semelhantes e reduzir o número de características em um modelo.
+
+Alguns métodos utilizados no aprendizado de máquina não supervisionado são:
+- Redes Neurais
+- Clustering
+- Técnicas de Redução de Dimensionalidade (ex.: Análise do Componente Principal)

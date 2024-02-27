@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       00ea19e4-ad19-41ea-9cde-359a8f96865a
+:END:
+#+TITLE: Seletor da Função (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:d2fe0549-7202-4dc6-8e8f-0229bdcf74fa][Representação de Funções (Solidity)]]
+- source ::
+
+O seletor da função é os primeiros 4 bytes do hash ~keccak256~ do nome da função juntamento com o tipo de seus argumentos.
+
+Se sua função é ~putValue(uint256 value)~, você vai codificar como ~putValue(uint256)~ usando ~keccak256~ e pegar os 4 primeiros bytes do resultado.

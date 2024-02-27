@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       410e9489-9d48-44a3-8125-abf61a8df4c8
+:END:
+#+TITLE: Reentrada (SWC-107)
+#+DATE: 2023-09-07
+#+FILETAGS: reentrancy
+
+- tags :: [[id:aeba353a-a29e-49a3-955d-e4bc8577f9df][Vetores de Ataque em Chamadas Externas (Solidity)]]
+- source :: [[https://github.com/x676f64/secureum-mind_map/blob/master/content/4.%20Pitfalls%20and%20Best%20Practices%20101/Reentrancy%20vulnerabilities.md][Reentrancy vulnerabilities (Secureum)]], [[https://swcregistry.io/docs/SWC-107/][Reentrancy (SWC-107)]], [[https://scsfg.io/hackers/reentrancy/#reentrancy][Reentrancy (SCSFG)]], [[https://www.youtube.com/watch?v=DRZogmD647U&t=5775s][Complete Reentrancy Guide (YT)]]
+
+É quando uma chamada externa arbitrária é feita quando as variáveis de estado utilizadas ainda não foram atualizadas e a função é chamada novamente antes de terminar sua execução.
+
+* Tipos de Reentrada
+  Seu comportamento pode variar de acordo com o tipo de reentrada:
+  - [[id:6a5baf8e-8c6b-44b5-87ae-64d1191e2fde][Reentrada de Função Única]]
+  - [[id:41db13b6-000c-4c4a-8496-b83497cfe586][Reentrada Entre Funções]]
+  - [[id:678d0ee9-4fd4-4f9f-9ae9-180b756832d8][Reentrada de Somente-Leitura (Solidity)]]
+
+* Como evitar
+- Certifique-se que todas as alterações de estados internas são feitas antes que a chamada seja executada. Isso é conhecido como Check-Effects-Interactions Pattern (CEI).
+- Use um bloqueador de reentrada ([[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol][OpenZeppelin's ReentrancyGuard]], por exemplo).

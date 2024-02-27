@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ebda5a36-129f-44c8-9d3e-057b32f1c102
+:END:
+#+title: Stablecoins Algorítmicos
+#+date: [2023-11-28 ter 13:27]
+- tags :: [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+
+É quando um algorítmo, que não precisa de intervenção humana, é responsável por fazer minting e burning do stablecoin, mantendo sua estabilidade.

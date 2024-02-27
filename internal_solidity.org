@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       9d8c341b-91da-4018-bfbe-18134c0462de
+:END:
+#+TITLE: Internal (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:bf19d622-fb59-4ed3-94b6-fea51f52eba9][Tipos de Visibilidade (Solidity)]]
+- source ::
+
+Modificador de visibilidade para funções que faz com que ela possa ser chamada apenas pelo próprio contrato em que ela está. Contratos que derivam deste podem chamar funções internas herdadas.
+
+#+BEGIN_SRC solidity
+  contract InternalExample {
+      // Esta é uma função interna
+      function getValue() internal view returns (string memory) {
+	  return "Posso ser chamado apenas pelo contrato em que estou o que deriva de mim!";
+      }
+  }
+
+  contract InternalExampleChild is InternalExample {
+      function showValue() public view returns (string memory) {
+	  return getValue();
+      }
+  }
+#+END_SRC

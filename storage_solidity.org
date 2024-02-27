@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       64e75f7b-8387-4e47-8d09-ef70a1883c2d
+:END:
+#+title: Storage (Solidity)
+#+date: [2023-12-08 sex 10:58]
+- tags :: [[id:763c824c-5a95-4e09-8d24-b44cab7cc7c8][Locais de Dados (Solidity)]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-memory-storage-calldata?lesson_format=transcript][Updraft Cyfrin | Memory, storage and calldata]]
+
+Em Solidity, ~storage~ é a palavra-chave para os dados que são guardados permanentemente dentro do contrato.
+
+Esses dados podem ser alterados e, dentro de funções, podemos criar ponteiros para dados guardados na ~storage~.
+
+* Exemplo
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract StorageExample {
+    struct Person {
+	string name;
+	uint256 age;
+    }
+
+    mapping(address => Person) persons;
+
+    function addPerson(string calldata name, uint256 age) external {
+	persons[msg.sender] = Person(name, age);
+    }
+
+    function changePerson(address target, string calldata name, uint256 age) external {
+	Person storage person = persons[target]; // ponteiro
+	person.name = name;
+	person.age = age;
+    }
+}
+#+end_src

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       5ff73c8c-c357-4da4-96a9-81aa9846f2eb
+:END:
+#+title: Pragma de ABI Coder (Solidity)
+#+date: 2023-09-22
+- tags :: [[id:e9197335-eebd-4af5-8258-fc30baeccbcd][Pragma (Solidity)]]
+- source :: [[https://docs.soliditylang.org/en/v0.8.21/layout-of-source-files.html#abi-coder-pragma][ABI Coder Pragmas]]
+
+Define a versão do ABI Coder a ser utilizada no contrato atual.
+
+A definição explícita não é necessária, visto que o próprio compilador Solidity já escolhe a versão apropriada implicitamente.
+
+~pragma abicoder v1~ especifica a utilização do ABI Coder v1.
+
+~pragma abicoder v2~ especifica a utilização do ABI Coder v2.

@@ -1,0 +1,80 @@
+:PROPERTIES:
+:ID:       452af675-020c-4e5b-9eeb-a886119135be
+:END:
+#+title: Formatação Display (Rust)
+#+date: [2023-11-13 seg 07:37]
+#+filetags: :rust:macro:format:display:
+- tags :: [[id:cbe7e407-21a5-4ea3-8974-8eeece0abeee][Formatação (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/hello/print.html][Formatted print - Rust By Example]], [[https://doc.rust-lang.org/rust-by-example/hello/print/print_display.html][Display - Rust By Example]], [[https://doc.rust-lang.org/std/fmt/][std::fmt Module]], [[https://doc.rust-lang.org/std/fmt/trait.Display.html][std::fmt::Display Trait]]
+
+É o ~trait~ da ~std::fmt~ utilizado para visualização.
+
+Todos os tipos que quiserem ser impressos usando ele devem ter uma implementação para ~fmt::Display~.
+
+Não há como utilizar ~derive~ para criar uma implementação automaticamente.
+
+Os tipos da ~std~ já têm essa implementação, com exceção do ~struct~.
+
+* Flags
+- /vazio/ => Visualização padrão (~fmt::Display~)
+- ~o~ => Visualização com inteiros octais (~fmt::Octal~)
+- ~x~ => Visualização com inteiros hexadecimais em minúsculo (~fmt::LowerHex~)
+- ~X~ => Visualização com inteiros hexadecimais em maiúsculo (~fmt::UpperHex~)
+- ~p~ => Visualização de endereço de memória de ponteiro (~fmt::Pointer~)
+- ~b~ => Visualização com inteiros binários (~fmt::Binary~)
+- ~e~ => Visualização com inteiros em notação científica em minúsculo (~fmt::LowerExp~)
+- ~E~ => Visualização com inteiros em notação científica em maiúsculo (~fmt::UpperExp~)
+
+* Como Usar
+Para os tipos que já têm essa implementação, você pode usar da seguinte forma:
+
+#+begin_src rust :results output
+fn main() {
+    let value: i32 = 45;
+
+    println!("Display '' {}", value);
+    println!("Display 'o' {:o}", value);
+    println!("Display 'x' {:x}", value);
+    println!("Display 'X' {:X}", value);
+    println!("Display 'p' {:p}", &value);
+    println!("Display 'b' {:b}", value);
+    println!("Display 'e' {:e}", value);
+    println!("Display 'E' {:E}", value);
+}
+#+end_src
+
+#+RESULTS:
+: Display '' 45
+: Display 'o' 55
+: Display 'x' 2d
+: Display 'X' 2D
+: Display 'p' 0x4a9539f8bc
+: Display 'b' 101101
+: Display 'e' 4.5e1
+: Display 'E' 4.5E1
+
+Para os tipos que não têm essa implementação, como o ~struct~, por exemplo, devemos implementar manualmente:
+
+#+begin_src rust :results output
+use std::fmt;
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl fmt::Display for Point {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "({}, {})", self.x, self.y)
+    }
+}
+
+fn main() {
+    let origin = Point { x: 0, y: 0 };
+
+    println!("Display '' {}", origin);
+}
+#+end_src
+
+#+RESULTS:
+: Display '' (0, 0)

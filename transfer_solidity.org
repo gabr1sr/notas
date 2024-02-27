@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       78b703a7-ed5b-43fc-9097-eae8b21734cd
+:END:
+#+TITLE: Transfer (Solidity)
+#+DATE: 2023-09-11
+#+FILETAGS: solidity syntax transfer
+
+- tags :: [[id:b544e43d-b9b0-419b-99c5-f895744b50c0][Transferindo ETH (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/#eth-transfers][Digging deeper into Solidity's syntax]]
+
+Transferir ETH usando a função ~transfer~ não é o método atualmente recomendado. Apesar de ela reverter a transação em caso de falha, ela ainda é limitada a apenas 2300 gas para execução.
+
+#+BEGIN_SRC solidity
+  contract SenderContract {
+      function sendEther(address payable to) public payable {
+	  to.transfer(msg.value);
+      }
+  }
+#+END_SRC

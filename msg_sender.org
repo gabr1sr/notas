@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f2c7b91b-933e-42c7-81cc-013f1dc0a3d5
+:END:
+#+TITLE: msg.sender
+#+DATE: 2023-09-07
+- tags :: [[id:9fb65783-f01a-41f3-9e4d-320af8da5ab4][Variáveis Globais (Solidity)]]
+- source ::
+
+É uma variável global que retorna o endereço de quem chamou a função.

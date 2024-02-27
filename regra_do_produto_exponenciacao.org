@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       dea1dee3-79af-4508-889b-3ea08dc3298c
+:END:
+#+title: Regra do Produto (Exponenciação)
+#+date: [2023-11-26 dom 06:45]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]]
+
+É uma regra da exponenciação onde:
+
+\begin{equation}
+a^m\times a^n = a^{m+n}
+\end{equation}
+
+* Exemplo
+
+\begin{equation}
+2^3 \times 2^4 = 2^{3+4} = 2^7
+\end{equation}
+

@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       b6cf209c-7f67-444f-848d-e6151e55b9cd
+:END:
+#+TITLE: Enums (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:3f0b6320-acb3-4691-bb7a-7c10e407891a][Tipos Definidos pelo Usuário (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/#enums][Digging deeper into Solidity's syntax]]
+
+A palavra *Enum* se refere a *Enumerable*. Eles são tipos definidos pelo usuário que contém nomes legíveis para um conjunto de constantes, chamados membros. Eles são comumente utilizados para restringir uma variável a apenas um conjunto de valores pré-definidos. Já que eles são apenas uma abstração para constantes legíveis, na realidade, eles são internamente representados como ~uint~.
+
+#+BEGIN_SRC solidity
+contract Enum {
+    enum Status {
+        Pending,    // 0
+        Shipped,    // 1
+        Accepted,   // 2
+        Rejected,   // 3
+        Canceled    // 4
+    }
+
+    Status public status;
+
+    function get() public view returns (Status) {
+        return status;
+    }
+
+    function set(Status _status) public {
+        status = _status;
+    }
+
+    function cancel() public {
+        status = Status.Canceled;
+    }
+}
+#+END_SRC

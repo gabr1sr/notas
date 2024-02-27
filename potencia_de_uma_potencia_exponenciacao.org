@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       b59d6014-3756-4872-a351-f2d4e3923424
+:END:
+#+title: Potência de uma Potência (Exponenciação)
+#+date: [2023-11-26 dom 07:01]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]]
+
+É uma regra da exponenciação onde:
+
+\begin{equation}
+\left( a^m \right)^n = a^{mn}
+\end{equation}

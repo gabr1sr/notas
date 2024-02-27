@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       763c824c-5a95-4e09-8d24-b44cab7cc7c8
+:END:
+#+title: Locais de Dados (Solidity)
+#+date: [2023-12-08 sex 10:52]
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-memory-storage-calldata?lesson_format=transcript][Updraft Cyfrin | Memory, storage and calldata]]
+
+Na linguagem Solidity, os dados podem ser guardados em 6 locais:
+- Stack
+- [[id:fb1f484b-eb2a-47e8-a24a-8810379f160c][Memory (Solidity)]]
+- [[id:64e75f7b-8387-4e47-8d09-ef70a1883c2d][Storage (Solidity)]]
+- [[id:64fdbf97-68c4-4c34-b1e1-2106140a86de][Calldata (Solidity)]]
+- Code
+- Logs

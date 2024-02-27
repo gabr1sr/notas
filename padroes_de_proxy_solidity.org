@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       722b4df2-9898-4cf5-af91-6d6d607a1d1b
+:END:
+#+title: Padrões de Proxy (Solidity)
+#+date: 2023-09-20
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://learnweb3.io/lessons/building-smart-contracts-that-can-be-upgraded-over-time/][Building smart contracts that can be upgraded over time]]
+
+* Padrões
+- [[id:9be906aa-e3ed-4db7-8461-45f4e6f3000f][Transparent Proxy Pattern (Solidity)]]
+- [[id:ab5a1b50-99c0-406f-9ff3-64b2caccbe83][UUPS Proxy Pattern (Solidity)]]

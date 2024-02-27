@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       2c494800-b766-4d9a-a455-b4def0fcef35
+:END:
+#+title: Into (Rust)
+#+date: [2024-01-15 seg 00:38]
+#+filetags: :rust:conversion:into:
+- tags :: [[id:1881cbde-ea1b-4b05-8e21-1d752db63b68][Conversão (Rust)]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/conversion/from_into.html#into][From and Into - Rust By Example]], [[https://doc.rust-lang.org/std/convert/trait.Into.html][trait.Into - std::convert]]
+
+O ~trait~ ~Into~ tem basicamente a mesma função que o ~From~ e irá chamá-lo quando necessário.
+
+Ele converte um valor para outro consumindo o valor de entrada.
+
+Prefira utilizar o ~From~.
+
+#+begin_src rust
+use std::convert::Into;
+
+#[derive(Debug)]
+struct Number {
+    value: i32,
+}
+
+impl Into<Number> for i32 {
+    fn into(self) -> Number {
+        Number { value: self }
+    }
+}
+
+fn main() {
+    let int = 5;
+    let num: Number = int.into();
+    println!("My number is {:?}", num);
+}
+#+end_src
+
+#+RESULTS:
+: My number is Number { value: 5 }

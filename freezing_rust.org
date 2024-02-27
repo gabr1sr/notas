@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       9ccce551-ebbb-41c7-ae8e-6d9330d71af6
+:END:
+#+title: Freezing (Rust)
+#+date: [2023-11-16 qui 06:47]
+#+filetags: :rust:var:freezing:
+- tags :: [[id:dd7d9276-04fc-45c8-b90d-61d4cd9b75c3][Variáveis (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/variable_bindings/freeze.html][Freezing - Rust By Example]]
+
+Freezing é a técnica de sobrescrever uma variável mutável com uma variável imutável em outro escopo, fazendo com que ela não possa ser modificada naquele escopo.
+
+* Como Usar
+Podemos fazer freezing da seguinte forma:
+
+#+begin_src rust
+let mut data = 123;
+
+println!("data = {}", data);
+
+// outro escopo
+{
+    let data = 456;
+    // neste escopo, data não poderá mais ser alterado
+
+    println!("data = {}", data);
+}
+
+// porém, neste escopo, que foi declarada como mutável, ela ainda poderá ser alterada
+data = 789;
+
+println!("data = {}", data);
+#+end_src
+
+#+RESULTS:
+: data = 123
+: data = 456
+: data = 789

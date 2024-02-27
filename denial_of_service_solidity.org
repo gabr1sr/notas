@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ea29d9e3-24e3-405a-8d7b-f3ddec8259bc
+:END:
+#+title: Denial of Service (Solidity)
+#+date: [2023-11-06 seg 18:22]
+- tags :: [[id:aeba353a-a29e-49a3-955d-e4bc8577f9df][Vetores de Ataque em Chamadas Externas (Solidity)]]
+- source :: [[https://consensys.github.io/smart-contract-best-practices/attacks/denial-of-service/][Denial of Service (Ethereum Smart Contract Best Practices)]]
+
+

@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       64fdbf97-68c4-4c34-b1e1-2106140a86de
+:END:
+#+title: Calldata (Solidity)
+#+date: [2023-12-08 sex 10:56]
+- tags :: [[id:763c824c-5a95-4e09-8d24-b44cab7cc7c8][Locais de Dados (Solidity)]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-memory-storage-calldata?lesson_format=transcript][Updraft Cyfrin | Memory, storage and calldata]]
+
+Em Solidity, ~calldata~ é a palavra-chave para os dados que são guardados temporariamente na chamada durante a execução de uma função.
+
+Dados com a palavra-chave ~calldata~ não podem ser alterados.
+
+* Exemplo
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract CalldataExample {
+    string name;
+
+    function setName(string calldata newName) external {
+	name = newName;
+    }
+}
+#+end_src

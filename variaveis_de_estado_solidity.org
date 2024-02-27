@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       8af7e62f-566e-47fe-9306-79908ad63060
+:END:
+#+TITLE: Variáveis de Estado (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:c79bb7b0-b848-42ab-b9f2-9e0ac690237e][Tipos de Variáveis (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]]
+
+São variáveis declaradas fora de funções, para manter o estado do contrato inteligente, e guardadas na blockchain.

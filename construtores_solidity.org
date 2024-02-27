@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       de8fa35d-8bbc-481e-b1c8-e3321f67e0a6
+:END:
+#+TITLE: Construtores (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:f87049ce-6295-48c6-9ea4-9b1d73df99bc][Funções (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/][Digging deeper into Solidity's syntax]]
+
+Um ~construtor~ é uma função opcional que é executada quando o contrato é primeiramente deployado. Você pode também passar argumentos em construtores.
+
+#+BEGIN_SRC solidity
+contract ConstructorExample {
+    string public name;
+
+    constructor(string memory _name) {
+        name = _name;
+    }
+}
+#+END_SRC

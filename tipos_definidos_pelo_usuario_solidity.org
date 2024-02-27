@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       3f0b6320-acb3-4691-bb7a-7c10e407891a
+:END:
+#+TITLE: Tipos Definidos pelo Usuário (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/][Digging deeper into Solidity's syntax]]
+
+São tipos que o usuário pode customizar.
+
+- [[id:4e630b0f-b20a-4767-aecd-96c387d00006][Mappings (Solidity)]]
+- [[id:b6cf209c-7f67-444f-848d-e6151e55b9cd][Enums (Solidity)]]
+- [[id:1a911353-43eb-4bcc-b856-a712a6d28129][Structs (Solidity)]]

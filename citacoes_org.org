@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d48c1daa-19c5-444a-baa7-16b523a0093c
+:END:
+#+title: Citações (Org)
+#+date: 2023-09-25
+- tags :: 
+- source :: [[https://blog.tecosaur.com/tmio/2021-07-31-citations.html][Introducing citations! (Tecosaur)]]
+
+  

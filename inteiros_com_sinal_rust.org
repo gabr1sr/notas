@@ -1,0 +1,150 @@
+:PROPERTIES:
+:ID:       7f75a1ef-9dfa-429d-83db-cd43ea94ac7e
+:END:
+#+title: Inteiros com Sinal (Rust)
+#+date: [2023-11-14 ter 05:07]
+#+filetags: :rust:type:primitive:signed:integer:
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+São números inteiros que podem ser positivos ou negativos.
+
+* Declaração
+Diferentes formas que podemos declarar os números inteiros com sinal.
+
+** Literal sem notação
+#+begin_src rust :noweb yes :results verbatim
+let num1: i8 = -123;
+let num2: i16 = 456;
+let num3: i32 = -789;
+let num4: i64 = 800000;
+let num5: i128 = -160_000_000;
+let num6: isize = 888;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: num1: i8 = -123
+: num2: i16 = 456
+: num3: i32 = -789
+: num4: i64 = 800000
+: num5: i128 = -160000000
+: num6: isize = 888
+
+** Literal com notação hexadecimal
+#+begin_src rust :noweb yes :results verbatim
+let num1: i8 = 0x7F;
+let num2: i16 = -0x7FFF;
+let num3: i32 = 0x7FFFFFFF;
+let num4: i64 = -0x7FFFFFFFFFFFFFFF;
+let num5: i128 = 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+let num6: isize = -0x7FFFFFFF;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: num1: i8 = 127
+: num2: i16 = -32767
+: num3: i32 = 2147483647
+: num4: i64 = -9223372036854775807
+: num5: i128 = 170141183460469231731687303715884105727
+: num6: isize = -2147483647
+
+** Literal com notação binária
+#+begin_src rust :noweb yes :results verbatim
+let num1: i8 = -0b01;
+let num2: i16 = 0b10;
+let num3: i32 = -0b11;
+let num4: i64 = 0b100;
+let num5: i128 = -0b101;
+let num6: isize = 0b110;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: num1: i8 = -1
+: num2: i16 = 2
+: num3: i32 = -3
+: num4: i64 = 4
+: num5: i128 = -5
+: num6: isize = 6
+
+** Literal com notação binária
+#+begin_src rust :noweb yes :results verbatim
+let num1: i8 = 0o001;
+let num2: i16 = -0o002;
+let num3: i32 = 0o004;
+let num4: i64 = -0o006;
+let num5: i128 = 0o0012;
+let num6: isize = -0o024;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: num1: i8 = 1
+: num2: i16 = -2
+: num3: i32 = 4
+: num4: i64 = -6
+: num5: i128 = 10
+: num6: isize = -20
+
+** Literal com sufixo de tipo
+#+begin_src rust :noweb yes :results verbatim
+let num1 = -1i8;
+let num2 = 0x02i16;
+let num3 = -0b11i32;
+let num4 = 0o52i64;
+let num5 = -100_000i128;
+let num6 = 0x123123isize;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: num1: i8 = -1
+: num2: i16 = 2
+: num3: i32 = -3
+: num4: i64 = 42
+: num5: i128 = -100000
+: num6: isize = 1192227
+
+* Limites
+Valores mínimos e máximos:
+
+#+begin_src rust :results table :colnames '(type min max)
+println!("i8, {:e}, {:e}", i8::MIN, i8::MAX);
+println!("i16, {:e}, {:e}", i16::MIN, i16::MAX);
+println!("i32, {:e}, {:e}", i32::MIN, i32::MAX);
+println!("i64, {:e}, {:e}", i64::MIN, i64::MAX);
+println!("i128, {:e}, {:e}", i128::MIN, i128::MAX);
+println!("isize, {:e}, {:e}", isize::MIN, isize::MAX);
+#+end_src
+
+#+RESULTS:
+| type  |                     min |                    max |
+|-------+-------------------------+------------------------|
+| i8    |                  -128.0 |                  127.0 |
+| i16   |                -32768.0 |                32767.0 |
+| i32   |           -2147483648.0 |           2147483647.0 |
+| i64   |  -9.223372036854776e+18 |  9.223372036854776e+18 |
+| i128  | -1.7014118346046923e+38 | 1.7014118346046923e+38 |
+| isize |  -9.223372036854776e+18 |  9.223372036854776e+18 |
+
+* Códigos
+#+name: show_results
+#+begin_src rust :exports code
+fn type_of<T>(_: &T) -> &'static str {
+    std::any::type_name::<T>()
+}
+
+println!("num1: {} = {:?}", type_of(&num1), num1);
+println!("num2: {} = {:?}", type_of(&num2), num2);
+println!("num3: {} = {:?}", type_of(&num3), num3);
+println!("num4: {} = {:?}", type_of(&num4), num4);
+println!("num5: {} = {:?}", type_of(&num5), num5);
+println!("num6: {} = {:?}", type_of(&num6), num6);
+#+end_src

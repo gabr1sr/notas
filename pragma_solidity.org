@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e9197335-eebd-4af5-8258-fc30baeccbcd
+:END:
+#+title: Pragma (Solidity)
+#+date: 2023-09-22
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[Introduction to Remix][Setting Up Your First Contract]], [[https://docs.soliditylang.org/en/v0.8.21/layout-of-source-files.html#version-pragma][Version Pragmas]], [[https://docs.soliditylang.org/en/v0.8.21/layout-of-source-files.html#abi-coder-pragma][ABI Coder Pragmas]]
+
+A palavra-chave ~pragma~ pode ser utilizada para definir a versão do ~solidity~ ou ~abicoder~ da linguagem:
+- [[id:dc9ef36e-6f51-49e8-8e98-0fd64585968f][Pragma de Versão (Solidity)]]
+- [[id:5ff73c8c-c357-4da4-96a9-81aa9846f2eb][Pragma de ABI Coder (Solidity)]]

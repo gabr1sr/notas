@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       898e5d59-d417-4815-b060-d36c1af4e2d7
+:END:
+#+title: Variáveis Imutáveis (Rust)
+#+date: [2023-11-11 sáb 23:46]
+#+filetags: :rust:var:immutability:
+- tags :: [[id:dd7d9276-04fc-45c8-b90d-61d4cd9b75c3][Variáveis (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust by Example]]
+
+* Declaração
+As variáveis imutáveis são as variáveis padrões declaradas na linguagem Rust.
+
+** Demonstração
+Elas podem ser declaradas utilizando a palavra-chave ~let~:
+
+#+begin_src rust
+let float1: f64 = 1.0;
+let float2 = 2.0f64;
+let float3 = 3.0;
+let _unused_var = 123;
+let other_var;
+other_var = 456;
+#+end_src
+
+** Anatomia
+A síntaxe de declaração de variáveis imutáveis é essa:
+
+~let <nome>:<tipo?> = <valor>~
+
+*** Explicação
+- ~let~ => é a palavra-chave reservada para a declaração de variáveis
+- ~<nome>~ => é o nome da variável
+- ~<tipo?>~ (opcional) => é a anotação de tipo da variável
+- ~<valor>~ => é o valor da variável
+
+*** Observações
+Se o ~<tipo?>~ não for usado na declaração da variável, você pode utilizar o tipo padrão da variável (para números inteiroes é ~i32~ e para números flutuantes é ~f64~):
+
+#+begin_src rust
+let an_integer = 365; // i32
+let a_float = 45.0;   // f64
+#+end_src
+
+Ou então declarar o tipo no sufixo do valor da variável:
+
+#+begin_src rust
+let another_integer = 365i32; // i32
+let another_float = 444.4f64; // f64
+#+end_src

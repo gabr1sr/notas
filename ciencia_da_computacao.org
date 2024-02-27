@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       af388f3d-da8c-4dbf-baca-6335c64a290e
+:END:
+#+title: Ciência da Computação
+#+date: [2023-11-28 ter 13:35]
+- tags ::
+- source :: [[https://pt.wikipedia.org/wiki/Ci%C3%AAncia_da_computa%C3%A7%C3%A3o][Ciência da computação (Wikipedia)]]
+
+É a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que informatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautados no computador.
+
+* Assuntos
+- [[id:a9a7b09f-6548-4fea-9986-f8cfb43d4760][Linguagem de Programação]]
+
+* Áreas
+- [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
+- [[id:30e86b98-d63f-400f-837b-de0ff183166c][Inteligência Artificial (AI)]]

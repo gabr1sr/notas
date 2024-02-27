@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       88a4cb76-7081-43d3-8b9e-58afd78624a6
+:END:
+#+title: Blockchain
+#+date: 2023-09-06
+#+filetags: :blockchain:
+- tags :: [[id:af388f3d-da8c-4dbf-baca-6335c64a290e][Ciência da Computação]]
+- source :: [[https://academy.useweb3.xyz/certification/fundamentals][Blockchain Fundamentals]], [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/what-even-is-a-blockchain/][What even is a blockchain?]], [[https://www.youtube.com/watch?v=q9UzRyWRPcY][Quick Recap]]
+
+Blockchain ou cadeia de blocos é um registro distribuído e imutável com uma lista de gravações ([[id:ad539989-2434-4a7d-a702-1db7e422ce85][Blocos (Blockchain)]]) que são linkados juntos de forma segura através de hashes criptográficos, rodando em cima de uma rede ponta-a-ponta descentralizada, mantendo, de maneira coletiva, o consenso de quais dados e transações são gravados no registro.
+
+Essa rede ponto-a-ponto descentralizada é composta por [[id:82ac8203-170e-4e05-872c-f087e945fd8c][Nodes (Blockchain)]].
+
+Qualquer um pode interagir com o sistema sem a necessidade de intermediários.
+
+* Benefícios
+- Descentralização
+- Transparência e Flexibilidade
+- Velocidade e Eficiência
+- Segurança e Imutabilidade
+- Counterparty Risk Removal
+- Trust Minimized Agreements
+
+* Camadas
+As blockchains podem ser divididas em 2 camadas:
+- [[id:15fbd8e6-b0af-4e9b-bd98-0d35ce0b3ef1][Blockchain Layer-1]]
+- [[id:43c44ac7-4120-46fb-8a9c-487ab040537d][Blockchain Layer-2]]

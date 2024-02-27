@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       edfed397-b5a3-460e-8ff0-5650d9260029
+:END:
+#+title: Constantes (Rust)
+#+date: [2023-11-16 qui 06:35]
+#+filetags: :rust:type:custom:const:
+- tags :: [[id:6b36b249-71cf-496e-97ef-49bdb8a22ce3][Tipos Customizados (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/custom_types/constants.html][constants - Rust By Example]]
+
+Na linguagem Rust existem 2 tipos diferentes de constantes e ambas podem ser declaradas em qualquer escopo, incluindo o escopo global:
+- ~const~ => Um valor não alterável
+- ~static~ => Um valor que tem a possibilidade de ser mutável e que tem a lifetime ~'static~. Porém, alterar seu valor é ~unsafe~.
+
+* Declaração
+Podemos declarar as constantes da seguinte forma:
+
+#+begin_src rust
+static LANGUAGE: &str = "Rust";
+const THRESHOLD: i32 = 10;
+
+println!("Linguagem: {}", LANGUAGE);
+println!("Threshold: {}", THRESHOLD);
+#+end_src
+
+#+RESULTS:
+: Linguagem: Rust
+: Threshold: 10

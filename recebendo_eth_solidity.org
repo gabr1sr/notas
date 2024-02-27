@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       3def0416-7f77-489b-825b-c80d61a75f79
+:END:
+#+TITLE: Recebendo ETH (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:f87049ce-6295-48c6-9ea4-9b1d73df99bc][Funções (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/digging-deeper-into-soliditys-syntax/#receiving-eth][Digging deeper into Solidity's syntax]]
+
+Para um contrato receber transferências de ETH diretamente, você precisa ter pelo menos uma destas funções declarads:
+- ~receive() external payable~ - que é chamada quando ~msg.data~ é um valor vazio
+- ~fallback() external payable~ - que é utilizada caso contrário
+
+~msg.data~ é uma forma de especificar dados arbitrários junto de uma transação. Você geralmente não vai usar ela manualmente.
+
+#+BEGIN_SRC solidity
+contract ReceiveEther {
+    receive() external payable {}
+
+    fallback() external payable {}
+
+    function getBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
+}
+#+END_SRC

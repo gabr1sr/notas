@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       11dfec51-5abb-458c-90d9-18a8a3956111
+:END:
+#+title: Expoente Zero (Exponenciação)
+#+date: [2023-11-26 dom 07:06]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]], [[https://mundoeducacao.uol.com.br/matematica/propriedades-das-potencias.htm][Propriedades das Potências]]
+
+É uma regra da exponenciação onde:
+
+\begin{equation}
+a^0 = 1
+\end{equation}

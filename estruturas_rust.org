@@ -1,0 +1,171 @@
+:PROPERTIES:
+:ID:       57408193-9577-4441-a8c0-814b5029a11d
+:END:
+#+title: Estruturas (Rust)
+#+date: [2023-11-16 qui 01:11]
+#+filetags: :rust:type:custom:struct:
+- tags :: [[id:6b36b249-71cf-496e-97ef-49bdb8a22ce3][Tipos Customizados (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/custom_types/structs.html][Structures - Rust By Example]]
+
+Na linguagem Rust, existem 3 tipos de estruturas:
+- Estruturas-tuplas
+- Estruturas C
+- Estruturas unit
+
+* Declaração
+Formas diferentes de declaração de estruturas.
+
+** Estruturas-tuplas
+São tuplas nomeadas que podem ser definidas desta forma:
+
+#+begin_src rust
+struct Pair(i32, f32);
+#+end_src
+
+** Estruturas C
+São estruturas comuns que podem ser definidas da seguinte forma:
+
+#+name: c_structures
+#+begin_src rust
+#![allow(dead_code)]
+
+#[derive(Debug, Clone, Copy)]
+struct Point {
+    x: f32,
+    y: f32,
+}
+
+#[derive(Debug)]
+struct Rectangle {
+    top_left: Point,
+    bottom_right: Point,
+}
+#+end_src
+
+** Estruturas Unit
+São estruturas vazias, sem campos, geralmente utilizadas para polimorfismo (generics):
+
+#+begin_src rust
+struct Unit;
+#+end_src
+
+* Instanciação
+As estruturas podem ser instanciadas das seguintes formas:
+
+** Instanciação padrão
+#+name: default_struct_initialize
+#+begin_src rust :noweb yes :results verbatim
+<<c_structures>>
+
+let point: Point = Point { x: 10.3, y: 0.4 };
+
+<<show_point_results>>
+#+end_src
+
+#+RESULTS: default_struct_initialize
+: point = Point { x: 10.3, y: 0.4 }
+
+** Instanciação curta
+#+begin_src rust :noweb yes :results verbatim
+<<c_structures>>
+
+let x = 10.5;
+let y = 0.7;
+
+let point: Point = Point { x, y };
+
+<<show_point_results>>
+#+end_src
+
+#+RESULTS:
+: point = Point { x: 10.5, y: 0.7 }
+
+** Instanciação usando campos de outra estrutura
+#+begin_src rust :noweb yes :results verbatim
+<<c_structures>>
+
+let point: Point = Point { x: 10.3, y: 0.4 };
+
+let bottom_right = Point { x: 5.2, ..point };
+
+<<show_point_bottom_right_results>>
+#+end_src
+
+#+RESULTS:
+: point = Point { x: 10.3, y: 0.4 }
+: bottom_right = Point { x: 5.2, y: 0.4 }
+
+** Instanciando dentro de outra instanciação de estrutura
+#+begin_src rust :noweb yes :results verbatim
+<<c_structures>>
+
+let point: Point = Point { x: 10.3, y: 0.4 };
+
+let bottom_right = Point { x: 5.2, ..point };
+
+let rectangle: Rectangle = Rectangle {
+    top_left: Point { x: 10.3, y: 0.4 },
+    bottom_right: bottom_right,
+};
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: point = Point { x: 10.3, y: 0.4 }
+: bottom_right = Point { x: 5.2, y: 0.4 }
+: rectangle = Rectangle { top_left: Point { x: 10.3, y: 0.4 }, bottom_right: Point { x: 5.2, y: 0.4 } }
+
+* Valores
+Podemos obter os valores das seguintes formas:
+
+** Forma padrão
+#+begin_src rust :noweb yes :results verbatim
+<<c_structures>>
+
+let point: Point = Point { x: 10.4, y: 0.4 };
+
+println!("x = {}, y = {}", point.x, point.y);
+#+end_src
+
+#+RESULTS:
+: x = 10.4, y = 0.4
+
+** Desestruturação
+#+begin_src rust :noweb yes :results verbatim
+<<c_structures>>
+
+let point: Point = Point { x: 10.4, y: 0.4 };
+
+let Point { x: left_edge, y: right_edge } = point;
+
+println!("left_edge = {}, right_edge = {}", left_edge, right_edge);
+
+let Point { x, y } = point;
+
+println!("x = {}, y = {}", x, y);
+#+end_src
+
+#+RESULTS:
+: left_edge = 10.4, right_edge = 0.4
+: x = 10.4, y = 0.4
+
+* Códigos
+#+name: show_point_results
+#+begin_src rust :exports code
+println!("point = {:?}", point);
+#+end_src
+
+#+name: show_point_bottom_right_results
+#+begin_src rust :noweb yes :exports code
+<<show_point_results>>
+
+println!("bottom_right = {:?}", bottom_right);
+#+end_src
+
+#+name: show_results
+#+begin_src rust :noweb yes :exports code
+<<show_point_bottom_right_results>>
+
+println!("rectangle = {:?}", rectangle);
+#+end_src

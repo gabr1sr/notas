@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       b2cc37c0-c8b2-474d-8262-635b71e4c7b2
+:END:
+#+title: Potência de um Quociente (Exponenciação)
+#+date: [2023-11-26 dom 07:25]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]], [[https://mundoeducacao.uol.com.br/matematica/propriedades-das-potencias.htm][Propriedades das Potências]]
+
+É uma regra da exponenciação onde:
+
+\begin{equation}
+\left( \frac{a}{b} \right)^m = \frac{a^m}{b^m}
+\end{equation}
+
+* Exemplo
+\begin{equation}
+\left( \frac{2}{7} \right)^5 = \frac{2^5}{7^5} = \frac{32}{16807}
+\end{equation}

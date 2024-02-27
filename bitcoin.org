@@ -1,0 +1,12 @@
+:Properties:
+:ID:       56d1e584-834a-4018-be6b-1934f6278d4c
+:END:
+#+title: Bitcoin
+#+date: 2023-09-25
+#+filetags: :blockchain:layer1:bitcoin:
+- tags :: [[id:15fbd8e6-b0af-4e9b-bd98-0d35ce0b3ef1][Blockchain Layer-1]]
+- source :: [[https://updraft.cyfrin.io/courses/blockchain-basics/basics/what-is-a-blockchain?lesson_format=transcript][Cyfrin Updraft | What is a blockchain]], [[id:04548311-a06e-40d2-bf0f-8e53a7d66343][Notes on Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]]
+
+É o primeiro protocolo a utilizar a tecnologia blockchain.
+
+O [cite:@bitcoinWhitepaper] descreve como o Bitcoin pode facilitar as transações ponta-a-ponta dentro de uma rede descentralizada utilizando criptografia.

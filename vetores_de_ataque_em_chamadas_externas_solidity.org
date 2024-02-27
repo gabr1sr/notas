@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       aeba353a-a29e-49a3-955d-e4bc8577f9df
+:END:
+#+title: Vetores de Ataque em Chamadas Externas (Solidity)
+#+date: [2023-11-06 seg 18:07]
+- tags :: [[id:63ff893c-2383-4955-b029-ec9c9a3cc672][Padrões de Ataque (Solidity)]]
+- source :: [[https://www.youtube.com/watch?v=DRZogmD647U&t=3808s][External Call Safety (YT)]]
+
+* Ataques
+Chamadas externas são os principais locais onde os ataques ocorrem.
+
+Os principais assuntos a ter cuidado com chamadas externas são:
+- [[id:410e9489-9d48-44a3-8125-abf61a8df4c8][Reentrada (SWC-107)]]
+- [[id:ea29d9e3-24e3-405a-8d7b-f3ddec8259bc][Denial of Service (Solidity)]]

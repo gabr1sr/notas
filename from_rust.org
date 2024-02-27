@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       500c4b1e-ff18-415e-9b98-c83ac457f553
+:END:
+#+title: From (Rust)
+#+date: [2024-01-15 seg 00:32]
+#+filetags: :rust:conversion:from:
+- tags :: [[id:1881cbde-ea1b-4b05-8e21-1d752db63b68][Conversão (Rust)]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/conversion/from_into.html#from][From and Into - Rust By Example]], [[https://doc.rust-lang.org/std/convert/trait.From.html][trait.From - std::convert]]
+
+O ~From~ é um ~trait~ que define como um tipo pode criar ele mesmo através de outro tipo.
+
+Ele converte um valor para outro enquanto consume o valor de entrada.
+
+É preferível usar ~From~ do que ~Into~.
+
+* Exemplo
+#+begin_src rust
+let my_str = "hello";
+let my_string = String::from(my_str);
+println!("{}", my_string);
+#+end_src
+
+#+RESULTS:
+: hello
+
+* Implementação
+
+#+begin_src rust
+use std::convert::From;
+
+#[derive(Debug)]
+struct Number {
+    value: i32,
+}
+
+impl From<i32> for Number {
+    fn from(item: i32) -> Self {
+        Number { value: item }
+    }
+}
+
+fn main() {
+    let num = Number::from(30);
+    println!("My number is {:?}", num);
+}
+#+end_src
+
+#+RESULTS:
+: My number is Number { value: 30 }

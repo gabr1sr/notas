@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       b1148684-0950-4319-847b-bac303e72fc4
+:END:
+#+title: If e Else (Rust)
+#+date: [2024-02-26 Mon 17:38]
+- tags :: [[id:5a70fb7b-8198-4f96-bd42-296a23b986bd][Controle de Fluxo (Rust)]]
+- source :: [[https://google.github.io/comprehensive-rust/pt-BR/control-flow-basics/conditionals.html][Condicionais]], [[https://doc.rust-lang.org/reference/expressions/if-expr.html#if-expressions][if and if let expressions]], [[https://doc.rust-lang.org/stable/rust-by-example/flow_control/if_else.html][if/else - Rust By Example]]
+
+Na linguagem Rust, podemos usar expressões if como em qualquer outra linguagem:
+
+* If
+
+#+begin_src rust
+fn main() {
+    let x = 10;
+    if x < 20 {
+        println!("pequeno");
+    } else if x < 100 {
+        println!("grande");
+    } else {
+        println!("enorme");
+    }
+}
+#+end_src
+
+#+RESULTS:
+: pequeno
+
+Também podemos usá-lo como uma expressão:
+
+#+begin_src rust
+fn main() {
+    let x = 10;
+    let size = if x < 20 { "pequeno" } else { "grande" };
+    println!("tamanho do número: {}", size);
+}
+#+end_src
+
+#+RESULTS:
+: tamanho do número: pequeno
+
+* If Let
+#+begin_src rust
+let dish = ("Ham", "Eggs");
+
+if let ("Ham", eggs) = dish {
+    println!("Ham is served with {}", eggs);
+}
+
+if let _ = 5 {
+    println!("Irrefutable patterns are always true");
+}
+#+end_src
+
+#+RESULTS:
+: Ham is served with Eggs
+: Irrefutable patterns are always true

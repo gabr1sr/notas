@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a9a7b09f-6548-4fea-9986-f8cfb43d4760
+:END:
+#+title: Linguagem de Programação
+#+date: [2023-11-28 ter 13:37]
+- tags :: [[id:af388f3d-da8c-4dbf-baca-6335c64a290e][Ciência da Computação]]
+- source :: [[https://pt.wikipedia.org/wiki/Linguagem_de_programa%C3%A7%C3%A3o][Linguagem de programação (Wikipedia)]]
+
+É um método padronizado, formado por um conjunto de regras sintáticas e semânticas, de implementação de um código fonte - que pode ser compilado e transformado em um programa de computador, ou usado como script interpretado - que informará instruções de processamento ao computador.
+
+* Linguagens de Programação
+- [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]

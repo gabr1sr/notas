@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       0beeda63-5d3b-413a-984d-32c29c64bff4
+:END:
+#+title: Unit (Rust)
+#+date: [2023-11-14 ter 06:49]
+#+filetags: :rust:type:primitive:unit:
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+Tem exatamente um valor: ~()~.
+
+É usado quando não há nenhum valor que possa ser retornado.
+
+É comumente visto de forma implícita, quando a função não tem um tipo de retorno especificado.
+
+#+begin_src rust
+fn long() -> () {}
+
+fn short() {}
+#+end_src

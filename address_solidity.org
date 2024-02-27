@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       6a68a738-1c70-4771-b1a6-5abf960af51d
+:END:
+#+title: Address (Solidity)
+#+date: [2023-12-07 qui 22:00]
+- tags :: [[id:6c7fd246-3500-487d-9e14-374e1417f8f4][Tipos Básicos (Solidity)]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-basic-types?lesson_format=video][Updraft Cyfrin | Basic variable types]]
+
+Em Solidity, os endereços de carteiras e contratos são declarados com a palavra-chave ~address~.
+
+Um ~address~ ocupa 20 bytes de espaço (160 bits).
+
+Eles recebem um valor em hexadecimal com o sufixo ~0x~.
+
+#+begin_src solidity
+// SPDX-License-Identifier: GPLv3
+pragma solidity ^0.8.0;
+
+contract AddressExample {
+    address minValue = address(type(uint160).min); // 0x0000000000000000000000000000000000000000
+    address maxValue = address(type(uint160).max); // 0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF
+    address defaultValueZero; // 0x0000000000000000000000000000000000000000
+
+    function addressFunction() public pure returns (address) {
+	return 0x00000000000000000000000000000000DeaDBeef;
+    }
+}
+#+end_src

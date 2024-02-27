@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       15fbd8e6-b0af-4e9b-bd98-0d35ce0b3ef1
+:END:
+#+title: Blockchain Layer-1
+#+date: [2023-11-28 ter 12:55]
+- tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
+- source :: [[https://learnweb3.io/lessons/what-is-a-layer-2-blockchain][LearnWeb3 | What is a Layer 2 blockchain?]], [[https://learnweb3.io/courses/6394ea7c-0ad6-4a4a-879f-7f9756bc5976/lessons/ca063bb9-9466-4e8f-8b9f-1d2e8707de67][LearnWeb3 DAO | Looking at some popular non-EVM blockchains]]
+
+Uma blockchain Layer 1, também conhecida como a cadeia-pai - parent chain ou root chain -, é o nome usado para descrever protocolos de rede como Ethereum ou Bitcoin.
+
+Ela é simplesmente a rede principal que as soluções de escalabilidade Layer 2 extendem para melhorar a escalabilidade e quantidade de transações por segundo da rede principal.
+
+Ela muda as regras do protocolo diretamente em uma tentativa de escalar ou providenciar melhor usabilidade. Essas regras incluem, por exemplo, aumentar a quantidade de informações incluídas em cada bloco, ou acelerar o tempo de confirmação de bloco para cada bloco, para aumentar a velocidade de produção. Geralmente, essas alterações vem com o custo da redução de segurança e/ou descentralização aumentando os requerimentos de hardware para rodar os nodes, ou aumenta o custo para alguém se tornar um validador em um sistema Proof of Stake, etc.
+
+* Exemplos
+- [[id:32e979d8-28bc-4eea-b3dd-b8fe9bfbab0c][Ethereum]]
+- [[id:56d1e584-834a-4018-be6b-1934f6278d4c][Bitcoin]]

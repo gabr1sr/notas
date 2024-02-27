@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       8ce5656e-3c56-4ae7-b103-65a62b0a9ec9
+:END:
+#+title: Ponto Flutuante (Rust)
+#+date: [2023-11-14 ter 05:14]
+#+filetags: :rust:type:primitive:floating:point:
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+São números com casas decimais e que podem ser positivos ou negativos.
+
+Os pontos flutuantes seguem o padrão IEEE 754-2008.
+
+* Declaração
+Diferentes formas que podemos declaras os números de ponto flutuante.
+
+** Literal sem notação
+#+begin_src rust :noweb yes
+let float1: f32 = 1.1;
+let float2: f64 = 2.2_001;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: float1: f32 = 1.1
+: float2: f64 = 2.2001
+
+** Literal com notação científica
+#+begin_src rust :noweb yes
+let float1: f32 = 1.1e4;
+let float2: f64 = 2.2_001e3;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: float1: f32 = 11000.0
+: float2: f64 = 2200.1
+
+** Literal com sufixo de tipo
+#+begin_src rust :noweb yes
+let float1 = 1.1f32;
+let float2 = 2.2_001e3f64;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: float1: f32 = 1.1
+: float2: f64 = 2200.1
+
+* Limites
+Dígitos, valores mínimos e máximos:
+
+#+begin_src rust :results table :colnames '(type digits min max)
+println!("f32, {}, {:e}, {:e}", f32::DIGITS, f32::MIN, f32::MAX);
+println!("f64, {}, {:e}, {:e}", f64::DIGITS, f64::MIN, f64::MAX);
+#+end_src
+
+#+RESULTS:
+| type | digits |                      min |                     max |
+|------+--------+--------------------------+-------------------------|
+| f32  |      6 |           -3.4028235e+38 |           3.4028235e+38 |
+| f64  |     15 | -1.7976931348623157e+308 | 1.7976931348623157e+308 |
+
+* Códigos
+#+name: show_results
+#+begin_src rust :exports code
+fn type_of<T>(_: &T) -> &'static str {
+    std::any::type_name::<T>()
+}
+
+println!("float1: {} = {:?}", type_of(&float1), float1);
+println!("float2: {} = {:?}", type_of(&float2), float2);
+#+end_src

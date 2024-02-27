@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       962c7430-afae-4e07-885a-8f23bf72de82
+:END:
+#+title: Arrays (Solidity)
+#+date: [2023-12-08 sex 10:14]
+- tags :: [[id:6c7fd246-3500-487d-9e14-374e1417f8f4][Tipos Básicos (Solidity)]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-arrays-and-structs?lesson_format=video][Updraft Cyfrin | Arrays and structs]], [[https://docs.soliditylang.org/en/latest/types.html#array-members][Solidity Docs | Array Members]]
+
+Em Solidity, podemos declarar arrays das seguintes formas:
+- ~T[]~ => array do tipo ~T~ com tamanho dinâmico.
+- ~T[<size>]~ => array do tipo ~T~ com tamanho fixo (~<size>~ de tamanho).
+
+* Membros
+- ~length~ => retorna o tamanho do array.
+- ~push()~ => adiciona um valor iniciado em zero ao final do array e retorna uma referência ao último elemento do array.
+- ~push(x)~ => adiciona o valor ~x~ ao final do array e retorna nada.
+- ~pop()~ => remove um elemento do final do array e retorna nada.
+
+* Acessar Elementos
+Podemos acessar elementos específicos do array através de array subscripting: ~<array>[<index>]~.
+
+Para pegar o elemento de índice ~5~ de um array, fazemos isto, por exemplo: ~array[5]~.
+
+* Slices
+Podemos criar um slice de array através da síntaxe: ~<array>[<start>:<end>]~.
+
+Para criarmos um slice de array do elemento de índice ~5~ até o final, fazemos isto: ~array[5:]~.
+
+Para o primeiro elemento até o elemento de índice ~5~, fazemos isto: ~array[:5]~.
+
+Para o elemento de índice ~x~ até o elemento de índice ~y~, fazemos isto: ~array[x:y]~.
+
+* Exemplos
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract ArrayExample {
+    address[] dynamicAddresses;
+    uint256[5] fiveUint256s;
+
+    function addAddress(address newAddress) public {
+	dynamicAddresses.push(newAddress);
+    }
+
+    function addUint256(uint256 index, uint256 newUint256) public {
+	fiveUint256s[index] = newUint256;
+    }
+
+    function firstAddress() public view returns (address) {
+	return dynamicAddresses[0];
+    }
+
+    function firstUint256() public view returns (uint256) {
+	return fiveUint256s[0];
+    }
+}
+#+end_src

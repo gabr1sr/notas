@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       fb1f484b-eb2a-47e8-a24a-8810379f160c
+:END:
+#+title: Memory (Solidity)
+#+date: [2023-12-08 sex 10:53]
+- tags :: [[id:763c824c-5a95-4e09-8d24-b44cab7cc7c8][Locais de Dados (Solidity)]]
+- source :: [[https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-memory-storage-calldata?lesson_format=transcript][Updraft Cyfrin | Memory, storage and calldata]]
+
+Em Solidity, ~memory~ é a palavra-chave para os dados que são guardados temporariamente na memória durante a execução de uma função.
+
+Dados com a palavra-chave ~memory~ podem ser alteradas dentro do escopo da função.
+
+* Exemplo
+#+begin_src solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MemoryExample {
+    string name;
+
+    function setName(string memory newName) external {
+	newName = string.concat(newName, "[new]");
+	name = newName;
+    }
+}
+#+end_src

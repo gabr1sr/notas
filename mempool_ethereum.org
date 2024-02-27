@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       90d3e59b-94fa-4850-8550-e6c3bfd22800
+:END:
+#+title: Mempool (Ethereum)
+#+date: [2023-11-21 ter 06:24]
+- tags :: [[id:32e979d8-28bc-4eea-b3dd-b8fe9bfbab0c][Ethereum]]
+- source ::
+
+A Mempool é onde as transações esperam para serem gravadas na blockchain.

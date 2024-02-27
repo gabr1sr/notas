@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       b8bb5873-51bc-4716-975d-45fdeff3bad2
+:END:
+#+title: Arrays (Rust)
+#+date: [2023-11-14 ter 08:20]
+#+filetags: :rust:type:primitive:array:
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/rust-by-example/primitives/array.html][Arrays and Slices - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+Podemos dizer que os arrays são coleções de objetos do mesmo tipo ~T~.
+
+Arrays podem ser criados utilizando ~[]~.
+
+Seu tamanho é obtido em tempo de compilação.
+
+Assinatura de tipo: ~[T; length]~.
+
+* Declaração
+Podemos declarar arrays das seguintes formas:
+
+** Array de tamanho fixo
+#+begin_src rust :noweb yes :results verbatim
+let xs: [i32; 5] = [1, 2, 3, 4, 5];
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: xs[0] = 1
+: xs[1] = 2
+: xs.len() = 5
+: xs ocupa 20 bytes
+
+** Array de elementos inicializados com mesmo valor
+#+begin_src rust :noweb yes :results verbatim
+let xs: [i32; 500] = [0; 500];
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: xs[0] = 0
+: xs[1] = 0
+: xs.len() = 500
+: xs ocupa 2000 bytes
+
+* Códigos
+#+name: show_results
+#+begin_src rust :exports code
+println!("xs[0] = {}", xs[0]);
+println!("xs[1] = {}", xs[1]);
+println!("xs.len() = {}", xs.len());
+println!("xs ocupa {} bytes", std::mem::size_of_val(&xs));
+#+end_src

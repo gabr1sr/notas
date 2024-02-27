@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       c62228b8-9da3-4da5-aa4a-19c6bc7c23f2
+:END:
+#+title: Consenso
+#+date: [2023-11-28 ter 13:10]
+#+filetags: :consensus:
+- tags ::
+- source ::
+
+Consenso é quando acontece uma aceitação ou concordância geral.
+
+* Exemplo
+Um grupo vai ao cinema.
+
+Se todos concordam em assistir ao mesmo filme, temos um consenso.
+
+Se há alguma discordância sobre o filme a assistir, o grupo tem que haver uma forma de decidir o filme que vão assistir.
+
+Em casos extremos, o grupo eventualmente irá se dividir.
+
+* Ethereum
+O consenso, na rede Ethereum, é atingido quando pelo menos 66% dos nodes concordam sobre o estado global da rede.

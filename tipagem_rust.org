@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       b2d3e817-1416-4f6d-8f1a-8d0353046d49
+:END:
+#+title: Tipagem (Rust)
+#+date: [2023-11-13 seg 06:10]
+#+filetags: :rust:type:
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/rust-by-example/custom_types.html][Custom Types - Rust By Example]]
+
+* Tipos
+- [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- [[id:6b36b249-71cf-496e-97ef-49bdb8a22ce3][Tipos Customizados (Rust)]]
+
+* Técnicas
+- [[id:c44d0c56-9232-4ba8-b679-b1e2af19a786][Inferência de Tipos (Rust)]]
+- [[id:74cbf448-7384-4b3b-a09a-99707980fa0b][Casting (Rust)]]
+- [[id:703eb852-19b0-4f0c-913f-82ae439e0c12][Literais (Rust)]]
+- [[id:10966e09-954f-4ab6-84d7-7b8dfa6a8390][Aliasing (Rust)]]

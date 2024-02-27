@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a45bc5b2-5098-4781-83c6-a02fadfc84cb
+:END:
+#+title: Nodes de Mineração (Blockchain)
+#+date: [2023-11-28 ter 13:14]
+- tags :: [[id:82ac8203-170e-4e05-872c-f087e945fd8c][Nodes (Blockchain)]]
+- source ::
+
+São Nodes responsáveis por agrupar novas transações de uma blockchain dentro de um bloco.
+
+Também são responsáveis por verificar as transações e propor novos blocos que serão incluídos no estado global da blockchain.
+
+Isso é feito através de um processo chamado de [[id:6381faf6-ee5d-4b3e-9341-432397b95e68][Mineração (Blockchain)]].

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       d2fe0549-7202-4dc6-8e8f-0229bdcf74fa
+:END:
+#+TITLE: Representação de Funções (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:eddfed7f-241c-4dcd-913f-b38132ddb385][Detalhes Técnicos (Solidity)]]
+- source ::
+
+Na Ethereum, uma função pode ser representada como ~4 + 32*N~ bytes, onde ~4 bytes~ são para o seletor da função e os ~32N~ bytes são para os argumentos da função.
+
+- [[id:00ea19e4-ad19-41ea-9cde-359a8f96865a][Seletor da Função (Solidity)]]
+- [[id:b4376ba0-a11d-40d3-b6c6-26d87dfd8213][Argumentos da Função (Solidity)]]

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       154a3687-0940-4fe9-ac82-02fd017c5f5a
+:END:
+#+title: Expoente Negativo (Exponenciação)
+#+date: [2023-11-26 dom 07:13]
+#+startup: latexpreview
+- tags :: [[id:64e00594-df6b-45f3-92bf-b410cefb7e94][Exponenciação]]
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]], [[https://mundoeducacao.uol.com.br/matematica/propriedades-das-potencias.htm][Propriedades das Potências]]
+
+É uma regra da exponenciação onde:
+
+\begin{equation}
+a^{-n} = \frac{1}{a^n}
+\end{equation}
+
+* Exemplo
+\begin{equation}
+5^{-7} = \frac{1}{5^7}
+\end{equation}

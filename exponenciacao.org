@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       64e00594-df6b-45f3-92bf-b410cefb7e94
+:END:
+#+title: Exponenciação
+#+date: [2023-11-26 dom 06:06]
+#+startup: latexpreview
+- tags ::
+- source :: [[https://www.youtube.com/watch?v=LwCRRUa8yTU&t=0s][Exponent Rules (freeCodeCamp YT)]], [[https://sciencenotes.org/exponent-rules-and-examples/][Exponent Rules and Examples]], [[https://mundoeducacao.uol.com.br/matematica/propriedades-das-potencias.htm][Propriedades das Potências]]
+
+É uma operação matemática, envolvendo 2 números:
+
+\begin{equation}
+a^n
+\end{equation}
+
+Onde $$a$$ é a base e $$n$$ é o expoente.
+
+* Regras de Exponenciação
+- [[id:dea1dee3-79af-4508-889b-3ea08dc3298c][Regra do Produto (Exponenciação)]] $$a^m \times a^n = a^{m+n}$$
+  
+- [[id:a1bc1f69-437a-4b44-8235-5c7285e06555][Regra do Quociente (Exponenciação)]] $$a^m \div a^n = a^{m-n}$$
+  
+- [[id:b59d6014-3756-4872-a351-f2d4e3923424][Potência de uma Potência (Exponenciação)]] $$\left( a^m \right)^n = a^{mn}$$
+  
+- [[id:87472b95-afbc-41ff-b69d-0fc923fedfa0][Potência de um Produto (Exponenciação)]] $$\left( a \times b \right)^m = a^m \times b^m$$
+  
+- [[id:b2cc37c0-c8b2-474d-8262-635b71e4c7b2][Potência de um Quociente (Exponenciação)]] $$\left(\frac{a}{b} \right)^m = \frac{a^m}{b^m}$$
+- [[id:11dfec51-5abb-458c-90d9-18a8a3956111][Expoente Zero (Exponenciação)]] $$a^0 = 1$$
+  
+- [[id:154a3687-0940-4fe9-ac82-02fd017c5f5a][Expoente Negativo (Exponenciação)]] $$a^{-n} = 1 \div a^n$$
+  
+- [[id:d9e9bcac-d429-410a-b339-380bc021edee][Expoente Fracionado (Exponenciação)]] $$a^\frac{m}{n} = \left( \sqrt[n]{a} \right)^m$$
+

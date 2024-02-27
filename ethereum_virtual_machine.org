@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       6c4e6149-1323-48b7-a121-4c7a75d248a7
+:END:
+#+title: Ethereum Virtual Machine
+#+date: 2023-09-06
+#+author: Gabriel Rosa
+#+filetags: :evm:
+
+- tags :: [[id:32e979d8-28bc-4eea-b3dd-b8fe9bfbab0c][Ethereum]]
+- source :: [[https://github.com/x676f64/secureum-mind_map/blob/master/content/1.%20Ethereum101/EVM.md][EVM (Secureum Mindmap)]], [[https://learnweb3.io/degrees/ethereum-developer-degree/sophomore/demystifying-the-ethereum-virtual-machine-evm/][Demystifying the Ethereum Virtual Machine (EVM)]], [[https://github.com/takenobu-hs/ethereum-evm-illustrated][Ethereum EVM Illustrated]]
+
+Ethereum Virtual Machine (EVM) é a máquina virutal de estados da rede Ethereum que define as regras para computar um novo estado válido de bloco para bloco.

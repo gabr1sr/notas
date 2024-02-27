@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       92097d09-7090-4583-87e3-db4f75e8b292
+:END:
+#+title: Tipos Primitivos (Rust)
+#+date: [2023-11-11 sáb 23:22]
+#+filetags: :rust:type:primitive:
+- tags :: [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+* Tipos Primitivos
+- [[id:7f75a1ef-9dfa-429d-83db-cd43ea94ac7e][Inteiros com Sinal]] (~i8~, ~i16~, ~i32~, ~i64~, ~i128~, ~isize~)
+- [[id:5fc6ede8-8ce5-4e88-a696-e65ed8faf72e][Inteiros sem Sinal]] (~u8~, ~u16~, ~u32~, ~u64~, ~u128~, ~usize~)
+- [[id:8ce5656e-3c56-4ae7-b103-65a62b0a9ec9][Ponto Flutuante]] (~f32~, ~f64~)
+- [[id:faf9ce61-f30e-42b0-adb3-f3d3fd637a9f][Caractere Único]] (~char~)
+- [[id:c69519ab-a01f-45a9-8494-a94d44e6312d][Booleano]] (~bool~)
+- [[id:0beeda63-5d3b-413a-984d-32c29c64bff4][Unit]] (~()~)
+- [[id:c9ef08f7-c992-4c3c-ae85-8442b67fefcf][Tuplas]] (~(T1, T2, ...)~)
+- [[id:b8bb5873-51bc-4716-975d-45fdeff3bad2][Arrays]] (~[T; length]~)
+- [[id:fa674c77-1a1a-45b6-9b46-cf2a5b017d75][Slices]] (~&[T]~)
+- [[id:f061e592-06e5-4db7-a4dc-9fb3abd928c5][Strings]] (~String~, ~&'static str~, ~&str~)

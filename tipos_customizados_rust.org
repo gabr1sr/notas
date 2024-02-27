@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       6b36b249-71cf-496e-97ef-49bdb8a22ce3
+:END:
+#+title: Tipos Customizados (Rust)
+#+date: [2023-11-12 dom 00:07]
+#+filetags: :rust:type:custom:
+- tags :: [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/custom_types.html][Custom Types - Rust By Example]]
+
+Os tipos customizados de Rust são:
+- [[id:57408193-9577-4441-a8c0-814b5029a11d][Estruturas]] (~struct~)
+- [[id:a51a403c-452e-460d-a215-5018b611f0b1][Enumeração]] (~enum~)
+- [[id:edfed397-b5a3-460e-8ff0-5650d9260029][Constantes]] (~const~, ~static~)

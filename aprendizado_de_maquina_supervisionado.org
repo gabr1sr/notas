@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       f30de689-64ca-4293-a373-b67347b67dc1
+:END:
+#+title: Aprendizado de Máquina Supervisionado
+#+date: [2023-11-28 ter 12:31]
+#+filetags: :ai:ml:supervisioned:
+- tags :: [[id:4300010e-271a-418a-ac6d-c526723bf582][Aprendizado de Máquina (ML)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/introduction-to-ai/][Introduction to AI]]
+
+É o tipo de Aprendizado de Máquina onde nós damos ao algoritmo exemplos rotulados para ele aprender. Ele usa esses exemplos para classificar novos dados ou prever resultados com precisão.
+
+O algoritmo ajusta suas configurações com base nos dados rotulados até que ele consiga fazer boas previsões.
+
+Alguns métodos utilizados no aprendizado de máquina supervisionado são:
+- Redes Neurais
+- Regressão Linear
+- Regressão Logística
+- Floresta Aleatória
+- Máquinas de Vetores de Suporte

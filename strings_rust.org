@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       f061e592-06e5-4db7-a4dc-9fb3abd928c5
+:END:
+#+title: Strings (Rust)
+#+date: [2023-11-15 qua 18:11]
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]], [[https://doc.rust-lang.org/rust-by-example/std/str.html][Strings - Rust By Example]]
+
+Na linguagem Rust, as strings podem ser divididas em 2 tipos:
+- ~String~ => um vetor de bytes (~Vec<u8>~) que garante sempre ser uma sequência UTF-8 válida.
+- ~&str~ => um slice (~&[u8]~) que sempre aponta para uma sequência UTF-8 válida e que pode ser usada para ver em uma ~String~, assim como ~&[T]~ consegue ver em ~Vec<T>~. (Veja [[id:fa674c77-1a1a-45b6-9b46-cf2a5b017d75][Slices]])
+
+O ~&str~ é um acrônimo para ~&'static str~. ~static~ é um lifetime.
+
+* Declaração
+Podemos declarar strings das seguintes formas:
+
+** Literal (slice de String)
+A referência para uma string é alocada na memória de apenas leitura.
+
+#+begin_src rust :noweb yes :results verbatim
+let string1: &'static str = "Hello";
+let string2: &str = "World";
+let string3 = "Hello, World!";
+
+<<show_literal_str_results>>
+#+end_src
+
+#+RESULTS:
+: string1: &str = "Hello"
+: string2: &str = "World"
+: string3: &str = "Hello, World!"
+
+** String a partir de um slice de String
+A string é alocada na heap.
+
+Se a variável for imutável, cada alteração deverá ser salva em outra variável (alocando mais memória).
+
+#+begin_src rust :noweb yes :results verbatim
+let alice = String::from("Alice");
+let bob: String = alice.replace("Alice", "Bob");
+
+<<show_string_from_slice_results>>
+#+end_src
+
+#+RESULTS:
+: alice: alloc::string::String = "Alice"
+: bob: alloc::string::String = "Bob"
+
+* Códigos
+#+name: type_of
+#+begin_src rust :exports code
+fn type_of<T>(_: &T) -> &'static str {
+    std::any::type_name::<T>()
+}
+#+end_src
+
+#+name: show_literal_str_results
+#+begin_src rust :noweb yes :exports code
+<<type_of>>
+
+println!("string1: {} = {:?}", type_of(&string1), string1);
+println!("string2: {} = {:?}", type_of(&string2), string2);
+println!("string3: {} = {:?}", type_of(&string3), string3);
+#+end_src
+
+#+name: show_string_from_slice_results
+#+begin_src rust :noweb yes :exports code
+<<type_of>>
+
+println!("alice: {} = {:?}", type_of(&alice), alice);
+println!("bob: {} = {:?}", type_of(&bob), bob);
+#+end_src

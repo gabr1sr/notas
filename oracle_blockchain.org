@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       40ef28cd-e648-417f-a08c-b1392cf30ecf
+:END:
+#+title: Oracle (Blockchain)
+#+date: [2023-12-04 seg 07:53]
+- tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
+- source :: [[https://updraft.cyfrin.io/courses/blockchain-basics/basics/what-is-a-blockchain?lesson_format=video][Cyfrin Updraft | What is a blockchain]]
+
+Oracles são qualquer dispositivo ou serviço que providencia dados do mundo real (de fora da blockchain) para a blockchain.

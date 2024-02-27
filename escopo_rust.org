@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       72670694-b283-4fd0-b734-8b556e94424d
+:END:
+#+title: Escopo (Rust)
+#+date: [2024-01-08 seg 16:44]
+#+filetags: :rust:scope:
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/variable_bindings/scope.html][Scope and Shadowing - Rust By Example (Book)]]
+
+Toda [[id:dd7d9276-04fc-45c8-b90d-61d4cd9b75c3][Associação de Variáveis]] tem um escopo e é restringida a viver em um bloco.
+
+Um bloco é uma coleção de declarações que estão dentro de ~{}~.
+
+#+begin_src rust
+fn main() {
+    let long_lived_binding = 1;
+
+    {
+        let short_lived_binding = 2;
+        println!("inner short: {}", short_lived_binding);
+    }
+
+    // ERRO:
+    // println!("outer short: {}", short_lived_binding);
+
+    println!("outer long: {}", long_lived_binding);
+}
+#+end_src

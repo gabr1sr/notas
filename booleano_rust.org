@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       c69519ab-a01f-45a9-8494-a94d44e6312d
+:END:
+#+title: Booleano (Rust)
+#+date: [2023-11-14 ter 06:47]
+#+filetags: :rust:type:primitive:bool:
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+É um valor que pode ser somente ~true~ ou ~false~.
+
+* Declaração
+Podemos declarar das seguintes formas:
+
+#+begin_src rust :noweb yes :results verbatim
+let bool1: bool = true;
+let bool2: bool = false;
+
+<<show_results>>
+#+end_src
+
+#+RESULTS:
+: bool1 = true
+: bool2 = false
+
+* Códigos
+#+name: show_results
+#+begin_src rust :exports code
+println!("bool1 = {:?}", bool1);
+println!("bool2 = {:?}", bool2);
+#+end_src

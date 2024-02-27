@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       810f9948-5eb6-4c87-9aa8-91f79fdc0533
+:END:
+#+title: Auditoria
+#+date: [2023-11-21 ter 08:34]
+- tags ::
+- source ::

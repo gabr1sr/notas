@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       10966e09-954f-4ab6-84d7-7b8dfa6a8390
+:END:
+#+title: Aliasing (Rust)
+#+date: [2024-01-13 sáb 16:13]
+#+filetags: :rust:type:aliasing:
+- tags :: [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- source :: [[https://doc.rust-lang.org/stable/rust-by-example/types/alias.html][Aliasing - Rust By Example]]
+
+A palavra-chave ~type~ pode ser utilizada para dar um novo nome a um tipo existente.
+
+O nome dos tipos devem seguir o padrão ~UpperCamelCase~ ou o compilador irá soltar um alerta.
+
+A exceção dessa regra são os tipos primitivos: ~usize~, ~f32~, etc.
+
+#+begin_src rust
+type NanoSecond = u64;
+type Inch = u64;
+type U64 = u64;
+
+fn main() {
+    // NanoSecond = Inch = U64 = u64
+    let nanoseconds: NanoSecond = 5 as U64;
+    let inches: Inch = 2 as U64;
+
+    println!("{} nanoseconds + {} inches = {} unit?", nanoseconds, inches, nanoseconds + inches);
+}
+#+end_src
+
+#+RESULTS:
+: 5 nanoseconds + 2 inches = 7 unit?

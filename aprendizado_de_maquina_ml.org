@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       4300010e-271a-418a-ac6d-c526723bf582
+:END:
+#+title: Aprendizado de Máquina (ML)
+#+date: [2023-11-28 ter 12:29]
+#+filetags: :ai:ml:
+- tags :: [[id:30e86b98-d63f-400f-837b-de0ff183166c][Inteligência Artificial (AI)]]
+- source :: [[https://learnweb3.io/degrees/ai-developer-degree/freshman-ai/introduction-to-ai/][Introduction to AI]]
+
+ML é sigla para Aprendizado de Máquina (ou Machine Learning).
+
+É um ramo da Inteligência Artificial que foca no uso de dadose algoritmos para imitar a forma como os humanos aprendem, gradualmente melhorando sua precisão.
+
+Ela é um componente importante no crescente campo da ciência de dados. Por meio do uso de métodos estatísticos, os algoritmos são treinados para fazer classificações ou previsões e descobrir informações importantes em projetos de extração/mineração de dados.
+
+* Modelos
+Podemos dividir os modelos de aprendizado de máquina nessas categorias:
+- [[id:f30de689-64ca-4293-a373-b67347b67dc1][Aprendizado de Máquina Supervisionado]]
+- [[id:0b06bd3e-8e1b-42f2-904d-10eba7866c21][Aprendizado de Máquina Não Supervisionado]]
+- [[id:d9b5501e-609d-47f1-b7b1-ab28c8c022f0][Aprendizado de Máquina Semi Supervisionado]]
+- [[id:6035d0c6-cf00-4156-9747-ad8bf0b9171e][Aprendizado de Máquina Reforçado]]
+
+* Subcampos
+- [[id:a0562591-c3fe-4071-9f52-01888deeb5d0][Redes Neurais (NN)]]

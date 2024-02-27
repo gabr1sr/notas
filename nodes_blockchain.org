@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       82ac8203-170e-4e05-872c-f087e945fd8c
+:END:
+#+title: Nodes (Blockchain)
+#+date: [2023-11-28 ter 13:12]
+#+filetags: :blockchain:nodes:
+- tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
+- source ::
+
+Nodes (ou Nós) são máquinas que rodam o software de uma blockchain.
+
+Eles formam uma rede ponto-a-ponto, afim de atingir a descentralização da rede.
+
+Dependendo do mecanismo de consenso da blockchain, eles podem virar [[id:a45bc5b2-5098-4781-83c6-a02fadfc84cb][Nodes de Mineração (Blockchain)]].
+
+É uma instância única em uma rede descentralizada.

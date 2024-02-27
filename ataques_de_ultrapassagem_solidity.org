@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       6911c4bd-108e-445d-bb96-b1f44ba32dd7
+:END:
+#+title: Ataques de Ultrapassagem (Solidity)
+#+date: [2023-11-21 ter 06:17]
+#+filetags: :solidity:attack:frontrun:
+- tags :: [[id:63ff893c-2383-4955-b029-ec9c9a3cc672][Padrões de Ataque (Solidity)]]
+- source :: [[https://scsfg.io/hackers/frontrunning/][Frontrunning (SCSFG)]], [[https://www.youtube.com/watch?v=DRZogmD647U&t=17134s][Frontrunning Attacks (YT)]]
+
+Ataques de Ultrapassagem ou Frontrunning são ataques que têm como intuito:
+- Manipular a ordem de transações da Mempool.
+- Fazer a transação de um usuário ter perdas ou ser revertida (griefing) por ser ultrapassado na Mempool.
+- Conseguir melhores resultados para si mesmo.
+
+* Como é feito
+Esses ataques são feitos aumentando o ~base + priority~ gas da sua transação para um ~base + priority~ gas maior que o da transação que deseja ultrapassar.
+
+* Tipos
+- [[id:23a3544c-2f43-427e-bdd7-0dfe253fcc1e][Sandwich Attack (Solidity)]]
+
+* Exemplos
+** Stake
+Vamos supor que apareça um token novo e o valor dele na pool é de $0.
+- Um usuário envia para a Mempool uma transação fazendo stake de $100.
+- Um usuário malicioso vê essa transação na Mempool, cria uma transação igual, porém, com mais gás e tem mais prioridade que a transação do outro usuário.
+- Esse mesmo usuário malicioso cria outra transação, com menos gás, para ser executada depois da transação do outro usuário, para fazer unstake.
+- O usuário malicioso sai ganhando em cima do stake do outro usuário.
+
+** Order ID
+Vamos supor que um protocolo use order IDs arbitrárias.
+- Um usuário cria uma transação com order ID 1.
+- Um usuário malicioso vê essa transação na Mempool e cria uma transação com o mesmo order ID, porém, com mais gas.
+- A transação do outro usuário é revertida.

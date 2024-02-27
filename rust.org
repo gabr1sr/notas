@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       1e4aaeb6-e986-4716-a1a5-43da87d82321
+:END:
+#+title: Rust
+#+date: [2023-11-11 sáb 04:11]
+#+filetags: :rust:lang:programming:
+- tags :: rust
+- source :: [[https://doc.rust-lang.org/book/foreword.html][Foreword - The Rust Programming Language (Book)]], [[https://google.github.io/comprehensive-rust/pt-BR/cargo/rust-ecosystem.html][O Ecossistema Rust]], [[https://google.github.io/comprehensive-rust/pt-BR/hello-world/what-is-rust.html][O que é Rust?]], [[https://google.github.io/comprehensive-rust/pt-BR/hello-world/benefits.html][Benefícios do Rust]], [[https://google.github.io/comprehensive-rust/pt-BR/types-and-values/hello-world.html][Olá, Mundo]]
+
+* Sobre
+Rust é uma linguagem de programação designada para ser eficiente em termos de velocidade e utilização de memória.
+
+Ela é compilada estaticamente e tem um papel semelhante ao C++.
+
+** Paradigmas
+- Imperativo
+- Declarativo
+- Funcionalidades de programação orientada à objetos (POO)
+- Conceitos de programação funcional
+
+** Plataformas suportadas
+- Linux
+- Windows
+- Mac OS
+
+** Arquiteturas suportadas
+- x86
+- x86_64
+- ARM
+- WebAssembly
+
+** Dispositivos suportados
+- Firmware
+- Bootloaders
+- Smart displays
+- Celulares
+- Desktops
+- Servidores
+
+* Benefícios
+Alguns benefícios que a linguagem oferece:
+
+** Segurança em memória em tempo de compilação
+- Sem variáveis não inicializadas.
+- Sem double-frees.
+- Sem use-after-free.
+- Sem ponteiros ~NULL~.
+- Sem mutexes bloqueados esquecidos.
+- Sem concorrência de dados entre threads.
+- Sem invalidação de iteradores.
+
+** Sem comportamento indefinido em tempo de execução
+- O acesso a matrizes tem limites verificados.
+- Estouro de números inteiros é definido ("pânico" ou wrap-around).
+
+** Recursos de linguagem modernos
+- Enums e pattern matching.
+- Generics.
+- FFI sem overhead.
+- Abstrações de custo zero.
+- Excelentes mensagens de erro do compilador.
+- Gerenciador de dependências integrado.
+- Suporte integrado para testes.
+- Excelente suporte ao LSP.
+
+* Ecossistema
+O ecossistema Rust consiste em várias ferramentas:
+
+** Rustc
+- Converte arquivos ~.rs~ em binários ou formatos intermediários.
+- Usa a LLVM como backend.
+
+** Cargo
+- Gerencia dependências de projetos.
+- Ferramenta de compilação do Rust.
+
+** Rustup
+- Instala e atualiza o conjunto de ferramentas do Rust.
+
+* Básico
+- [[id:33336d7e-07e8-449c-973e-9c881438e745][Comentários (Rust)]]
+- [[id:dd7d9276-04fc-45c8-b90d-61d4cd9b75c3][Associação de Variáveis (Rust)]]
+- [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- [[id:72670694-b283-4fd0-b734-8b556e94424d][Escopo (Rust)]]
+- [[id:1881cbde-ea1b-4b05-8e21-1d752db63b68][Conversão (Rust)]]
+- [[id:931be053-51ba-460b-90ca-1d45886b5208][Expressões (Rust)]]
+- [[id:5a70fb7b-8198-4f96-bd42-296a23b986bd][Controle de Fluxo (Rust)]]
+- [[id:8c21413f-6d90-49cb-bd79-724e87ecc027][Funções (Rust)]]
+  
+* Conceitos
+- [[id:0d87efeb-fa6f-4d7e-a963-6d03284757c4][Printing (Rust)]]
+- [[id:cbe7e407-21a5-4ea3-8974-8eeece0abeee][Formatação (Rust)]]

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       fa5a6c1d-4e41-4d41-82b6-c3cf5c55d6f4
+:END:
+#+TITLE: View (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:f6adc5cf-e0eb-4bca-959e-b4de5a7b9da7][Comportamentos de Funções (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]]
+
+São funções que não fazem nenhuma alteração de estados, mas lêem valores de estados.
+
+#+BEGIN_SRC solidity
+  contract ViewExample {
+      uint256 public x = 1;
+
+      // Esta função não modifica o estado
+      function addToX(uint256 y) public view returns (uint256) {
+	  return x + y;
+      }
+  }
+#+END_SRC

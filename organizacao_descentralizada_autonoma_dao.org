@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       76980fce-1813-49fc-97d8-69338b224b77
+:END:
+#+title: Organização Descentralizada Autônoma (DAO)
+#+date: [2023-12-04 seg 09:53]
+#+filetags: :blockchain:dao:
+- tags :: [[id:3e748f27-e779-4a92-b63d-f107ea307b75][Contratos Inteligentes]]
+- source :: [[https://updraft.cyfrin.io/courses/blockchain-basics/basics/smart-contract-landscape?lesson_format=transcript][Updraft Cyfrin | Current smart contract landscape]]
+
+Decentralized Autonomos Organizations (DAOs).
+
+São governadas inteiramente por contratos inteligentes e operadas de maneira descentralizada.
+
+Essa estrutura oferece benefícios como:
+- Governância transparente
+- Envolvimento eficiente
+- Regras claras
+
+Elas são uma evolução na política e governância.

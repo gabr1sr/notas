@@ -1,0 +1,117 @@
+:PROPERTIES:
+:ID:       a51a403c-452e-460d-a215-5018b611f0b1
+:END:
+#+title: Enumeração (Rust)
+#+date: [2023-11-16 qui 04:34]
+#+filetags: :rust:type:custom:enum:
+- tags :: [[id:6b36b249-71cf-496e-97ef-49bdb8a22ce3][Tipos Customizados (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/custom_types/enum.html][Enums - Rust By Example]]
+
+* Declaração
+Podemos declaras as enumerações das seguintes formas:
+
+** Enumeração padrão
+#+begin_src rust
+enum WebEvent {
+    PageLoad,
+    PageUnload,
+}
+
+let load = WebEvent::PageLoad;
+let unload = WebEvent::PageUnload;
+#+end_src
+
+** Enumeração com tuplas
+#+begin_src rust
+enum WebEvent {
+    KeyPress(char),
+    Paste(String),
+}
+
+let pressed = WebEvent::KeyPress('x');
+let pasted = WebEvent::Paste("hello".to_owned());
+#+end_src
+
+** Enumeração com structs
+#+begin_src rust
+enum WebEvent {
+    Click { x: i64, y: i64 },
+}
+
+let click = WebEvent::Click { x: 20, y: 80 };
+#+end_src
+
+** Enumeração C-like
+#+begin_src rust
+enum Color {
+    Red = 0xff0000,
+    Green = 0x00ff00,
+    Blue = 0x0000ff,
+}
+
+let red = Color::Red;
+let green = Color::Green;
+let blue = Color::Blue;
+#+end_src
+
+* Alias
+Podemos criar um apelido (alias) para um ~enum~ utilizando a palavra-chave ~type~:
+
+#+begin_src rust
+enum VeryVerboseEnumOfThingsToDoWithNumbers {
+    Add,
+    Subtract,
+}
+
+type Operations = VeryVerboseEnumOfThingsToDoWithNumbers;
+
+let x = Operations::Add;
+#+end_src
+
+Porém, a forma mais comum, é vermos um alias dentro de blocos ~impl~ como ~Self~:
+
+#+begin_src rust
+enum VeryVerboseEnumOfThingsToDoWithNumbers {
+    Add,
+    Subtract,
+}
+
+impl VeryVerboseEnumOfThingsToDoWithNumbers {
+    fn run(&self, x: i32, y: i32) -> i32 {
+        match self {
+            Self::Add => x + y,
+            Self::Subtract => x - y,
+        }
+    }
+}
+#+end_src
+
+
+* Use
+Podemos utilizar valores de enumerações diretamente, sem precisar chamar seu escopo, utilizando a palavra-chave ~use~:
+
+#+begin_src rust
+enum Status {
+    Rich,
+    Poor,
+}
+
+use crate::Status::{Poor, Rich};
+
+let poor = Poor;
+let rich = Rich;
+#+end_src
+
+Ou dessa forma:
+
+#+begin_src rust
+enum Status {
+    Rich,
+    Poor,
+}
+
+use crate::Status::*;
+
+let poor = Poor;
+let rich = Rich;
+#+end_src

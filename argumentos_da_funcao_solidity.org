@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b4376ba0-a11d-40d3-b6c6-26d87dfd8213
+:END:
+#+TITLE: Argumentos da Função (Solidity)
+#+DATE: 2023-09-07
+- tags :: [[id:d2fe0549-7202-4dc6-8e8f-0229bdcf74fa][Representação de Funções (Solidity)]]
+- source ::
+
+Cada argumento da função é convertido em uma hex string com tamanho fixo de 32 bytes e são concatenados juntos com o seletor da função. ~32~ é o tamanhjo e ~N~ é a quantidade de argumentos, na representação anterior.

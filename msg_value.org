@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b096ded8-c8db-4cf6-b20b-81be3ef5b952
+:END:
+#+TITLE: msg.value
+#+DATE: 2023-09-07
+- tags :: [[id:9fb65783-f01a-41f3-9e4d-320af8da5ab4][Variáveis Globais (Solidity)]]
+- source ::
+
+É uma variável global que retorna o valor de ETH em ~uint256~ que a transação do usuário está enviando.

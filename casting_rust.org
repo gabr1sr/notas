@@ -1,0 +1,111 @@
+:PROPERTIES:
+:ID:       74cbf448-7384-4b3b-a09a-99707980fa0b
+:END:
+#+title: Casting (Rust)
+#+date: [2023-11-17 sex 07:00]
+#+filetags: :rust:type:cast:
+- tags :: [[id:b2d3e817-1416-4f6d-8f1a-8d0353046d49][Tipagem (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/types/cast.html][Casting - Rust By Example]]
+
+Casting é a técnica de conveter tipos explicitamente.
+
+Na linguagem Rust, ela é feita através da palavra-chave ~as~.
+
+#+begin_src rust
+let decimal = 65.4321f32;
+
+// Conversão explícita
+let integer = decimal as u8;
+let character = integer as char;
+
+println!("Casting: {} -> {} -> {}", decimal, integer, character);
+#+end_src
+
+#+RESULTS:
+: Casting: 65.4321 -> 65 -> A
+
+Quando convertemos um valor para um tipo sem sinais, ~T~, a conta realizada para calcular o novo valor é:
+- Quando o ~valor~ é positivo: ~valor % (T::MAX + 1)~.
+- Quando o ~valor~ é negativo: ~(T::MAX + valor - 1) % (T::MAX + 1)~.
+
+Debaixo dos panos, os primeiros 8 bits menos significantes (LSB) são mantidos, enquanto o resto dos bits mais significativos (MSB) são truncados.
+
+#+begin_src rust
+#![allow(overflowing_literals)]
+
+// Ao menos que o valor caiba no tipo
+println!("1000 as u16: {}", 1000 as u16);
+
+// 1000 % 256 = 232
+println!("1000 as u8: {}", 1000 as u8);
+
+// -1 = (256 - 1) % 256 = 255
+println!("-1 as u8: {}", (-1i8) as u8);
+
+// 1000 % 256 = 232
+println!("1000 mod 256: {}", 1000 % 256);
+#+end_src
+
+#+RESULTS:
+: 1000 as u16: 1000
+: 1000 as u8: 232
+: -1 as u8: 255
+: 1000 mod 256: 232
+
+Quando convertemos um valor para um tipo com sinais, o resultado é o mesmo que quando sem sinais. Porém, se o bit mais significante desse valor é 1, o valor será negativo.
+
+#+begin_src rust
+#![allow(overflowing_literals)]
+
+println!("128 as i16: {}", 128 as i16);
+
+println!("128 as i8: {}", 128 as i8);
+
+println!("1000 as u8: {}", 1000 as u8);
+
+println!("232 as i8: {}", 232 as i8);
+#+end_src
+
+#+RESULTS:
+: 128 as i16: 128
+: 128 as i8: -128
+: 1000 as u8: 232
+: 232 as i8: -24
+
+Desde o Rust 1.45, a palavra-chave ~as~ faz um *saturating cast* quando convertendo de um ~float~ para um ~int~.
+
+Se o valor do ponto flutuante exceder o limite superior ou for menor que o limite inferior, o valor retornado será igual ao limite cruzado.
+
+#+begin_src rust
+println!("300.0 as u8: {}", 300.0f32 as u8);
+
+println!("-100.0 as u8: {}", -100.0f32 as u8);
+
+println!("nan as u8: {}", f32::NAN as u8);
+#+end_src
+
+#+RESULTS:
+: 300.0 as u8: 255
+: -100.0 as u8: 0
+: nan as u8: 0
+
+Esse comportamento tem um pequeno custo em runtime que pode ser evitado com métodos ~unsafe~.
+
+No entanto, os resultados podem transbordar e retornar valores inconsistentes.
+
+Use com sabedoria.
+
+#+begin_src rust
+unsafe {
+    println!("300.0 as u8: {}", 300.0f32.to_int_unchecked::<u8>());
+
+    println!("-100.0 as u8: {}", (-100.0f32).to_int_unchecked::<u8>());
+
+    println!("nan as u8: {}", f32::NAN.to_int_unchecked::<u8>());
+}
+#+end_src
+
+#+RESULTS:
+: 300.0 as u8: 0
+: -100.0 as u8: 0
+: nan as u8: 0

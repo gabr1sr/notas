@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       82ddf7b3-02cf-42fd-9f2c-1dfc6ed4a73c
+:END:
+#+title: Ether (Criptomoeda)
+#+date: [2023-11-21 ter 06:26]
+- tags :: [[id:32e979d8-28bc-4eea-b3dd-b8fe9bfbab0c][Ethereum]]
+- source ::
+
+Ether é a criptomoeda nativa da rede Ethereum.

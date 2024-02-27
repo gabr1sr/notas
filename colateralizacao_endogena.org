@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       5b822bb6-7bbb-4b38-be9b-4e4601926d7d
+:END:
+#+title: Colateralização Endógena
+#+date: [2023-11-28 ter 13:32]
+- tags :: [[id:59a68e87-bd6c-4e32-8d49-b8f7c20d01d7][Stablecoins]]
+- source :: [[https://www.youtube.com/watch?v=pciVQVocTYc][Stablecoins | But Actually]]
+
+É quando a colateralização do criptoativo é originada de dentro do protocolo.
+
+* Como identificar
+Se o criptoativo por algum acaso falir, a colateralização também vai falir junto com ele.
+
+Se o colateral foi criado com o propósito de apenas servir como colateral, a colateralização é endógena.
+
+Se o protocolo controla a emissão do colateral, ela é endógena.

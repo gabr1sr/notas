@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       f95ba6d7-a173-4f31-8dcb-4f51c281b4cd
+:END:
+#+title: Cosmos (Layer-1)
+#+date: [2024-02-22 Thu 14:07]
+- tags :: [[id:15fbd8e6-b0af-4e9b-bd98-0d35ce0b3ef1][Blockchain Layer-1]]
+- source ::
+
+  #+begin_quote
+  tech stack that allows for easy building of customized blockchains
+
+  primary goal is modularize and standardize the blockchain stack
+  #+end_quote
+
+#+begin_quote
+  all parts of the stack can have bugs, but most appchains do not roll their own consensus & networking layers
+#+end_quote

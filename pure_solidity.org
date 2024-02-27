@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       33f363df-ddc3-4ff5-b587-8fb163010997
+:END:
+#+TITLE: Pure (Solidity)
+#+DATE: 2023-09-06
+- tags :: [[id:f6adc5cf-e0eb-4bca-959e-b4de5a7b9da7][Comportamentos de Funções (Solidity)]]
+- source :: [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/introduction-to-solidity/][Introduction to Solidity]]
+
+São funções que não fazem nenhuma alteração de estados e nem lêem valores de estados.
+
+#+BEGIN_SRC solidity
+  contract PureExample {
+      // Esta função não modifica e nem lê o estado
+      function add(uint256 x, uint256 y) public pure returns (uint256) {
+	  return x + y;
+      }
+  }
+#+END_SRC

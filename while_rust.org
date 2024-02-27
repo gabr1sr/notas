@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       5980241c-5383-45bf-9123-f77e4d7dc79b
+:END:
+#+title: While (Rust)
+#+date: [2024-02-26 Mon 17:44]
+- tags :: [[id:5a70fb7b-8198-4f96-bd42-296a23b986bd][Controle de Fluxo (Rust)]]
+- source :: [[https://google.github.io/comprehensive-rust/pt-BR/control-flow-basics/loops.html][Loops]], [[https://doc.rust-lang.org/stable/rust-by-example/flow_control/while.html][while - Rust By Example]], [[https://doc.rust-lang.org/reference/expressions/loop-expr.html#predicate-loops][Loop expressions]]
+
+Podemos utilizar a palavra-chave ~while~ para criar loops predicados.
+
+O corpo do loop será executado enquanto a condição for verdadeira.
+
+* Loop predicado
+#+begin_src rust
+let mut i = 0;
+
+while i < 10 {
+    println!("hello");
+    i = i + 1;
+}
+#+end_src
+
+#+RESULTS:
+#+begin_example
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+#+end_example
+
+* Loop predicado com pattern
+#+begin_src rust
+let mut x = vec![1, 2, 3];
+
+while let Some(y) = x.pop() {
+    println!("y = {}", y);
+}
+
+while let _ = 5 {
+    println!("Irrefutable patterns are always true");
+    break;
+}
+#+end_src
+
+#+RESULTS:
+: y = 3
+: y = 2
+: y = 1
+: Irrefutable patterns are always true

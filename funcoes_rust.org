@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       8c21413f-6d90-49cb-bd79-724e87ecc027
+:END:
+#+title: Funções (Rust)
+#+date: [2024-02-26 Mon 21:54]
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://google.github.io/comprehensive-rust/control-flow-basics/functions.html][functions]], [[https://doc.rust-lang.org/reference/items/functions.html][Functions]]
+
+A palavra-chave ~fn~ é utilizada para declarar funções.
+
+Podemos anotar tipos em funções utilizando ~->~.
+
+#+begin_src rust
+fn answer_to_life_the_universe_and_everything() -> i32  {
+    return 42;
+}
+#+end_src
+
+Podemos parametrizar as funções da seguinte forma:
+
+#+begin_src rust
+fn first((value, _): (i32, i32)) -> i32 {
+    value
+}
+#+end_src

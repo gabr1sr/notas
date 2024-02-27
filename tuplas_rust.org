@@ -1,0 +1,118 @@
+:PROPERTIES:
+:ID:       c9ef08f7-c992-4c3c-ae85-8442b67fefcf
+:END:
+#+title: Tuplas (Rust)
+#+date: [2023-11-14 ter 07:02]
+- tags :: [[id:92097d09-7090-4583-87e3-db4f75e8b292][Tipos Primitivos (Rust)]]
+- source :: [[https://doc.rust-lang.org/rust-by-example/primitives.html][Primitives - Rust By Example]], [[https://doc.rust-lang.org/std/#primitives][Primitive Types - std Crate]]
+
+É uma coleção de valores de diferentes tipos.
+
+Tuplas são criadas usando ~()~.
+
+Sua assinatura de tipo é ~(T1, T2, ...)~, onde ~T1~ e ~T2~ são os tipos dos membros da tupla.
+
+* Declaração
+Elas podem ser declaradas das seguintes formas:
+
+#+name: long_tuple_declaration
+#+begin_src rust :exports code
+let long_tuple = (1u8, 2u16, 3u32, 4u64, -1i8, -2i16, -3i32, -4i64, 0.1f32, 0.2f64, 'a', true);
+#+end_src
+
+#+name: tuple_of_tuples_declaration
+#+begin_src rust :exports code
+let tuple_of_tuples = ((1u8, 2u16, 2u32), (4u64, -1i8), -2i16);
+#+end_src
+
+#+name: tuples_declaration
+#+begin_src rust :noweb yes :exports code
+<<long_tuple_declaration>>
+<<tuple_of_tuples_declaration>>
+let one_item_tuple = (5u32,);
+#+end_src
+
+#+begin_src rust :noweb yes :results verbatim
+<<tuples_declaration>>
+println!("Tupla longa: {:?}", long_tuple);
+println!("Tupla de tuplas: {:?}", tuple_of_tuples);
+println!("Tupla de 1 item: {:?}", one_item_tuple);
+#+end_src
+
+#+RESULTS:
+: Tupla longa: (1, 2, 3, 4, -1, -2, -3, -4, 0.1, 0.2, 'a', true)
+: Tupla de tuplas: ((1, 2, 2), (4, -1), -2)
+: Tupla de 1 item: (5,)
+
+Podemos obter valores dessa tupla através do índice:
+
+#+begin_src rust :noweb yes :results verbatim
+<<long_tuple_declaration>>
+println!("Primeiro valor da tupla longa: {}", long_tuple.0);
+println!("Segundo valor da tupla longa: {}", long_tuple.1);
+#+end_src
+
+#+RESULTS:
+: Primeiro valor da tupla longa: 1
+: Segundo valor da tupla longa: 2
+
+Elas são printáveis, mas apenas se tiverem 12 ou menos elementos:
+
+#+begin_src rust :noweb yes :results verbatim
+<<tuple_of_tuples_declaration>>
+println!("Tupla de tuplas: {:?}", tuple_of_tuples);
+#+end_src
+
+#+RESULTS:
+: Tupla de tuplas: ((1, 2, 2), (4, -1), -2)
+
+Elas podem ser usadas em funções:
+
+#+begin_src rust :results verbatim
+fn reverse(pair: (i32, bool)) -> (bool, i32) {
+    let (int_param, bool_param) = pair;
+
+    (bool_param, int_param)
+}
+
+let pair = (1, true);
+
+println!("Par: {:?}", pair);
+
+println!("Par ao contrário: {:?}", reverse(pair));
+#+end_src
+
+#+RESULTS:
+: Par: (1, true)
+: Par ao contrário: (true, 1)
+
+Em structs:
+
+#+begin_src rust :results verbatim
+#[derive(Debug)]
+struct Matrix(f32, f32, f32, f32);
+
+let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
+
+println!("{:?}", matrix);
+#+end_src
+
+#+RESULTS:
+: Matrix(1.1, 1.2, 2.1, 2.2)
+
+E podemos desestruturar tuplas para criar associações:
+
+#+begin_src rust :results verbatim
+let tuple = (1, "hello", 4.5, true);
+
+println!("Tupla: {:?}", tuple);
+
+let (a, b, c, d) = tuple;
+
+println!("Valores separados: {:?}, {:?}, {:?}, {:?}", a, b, c, d);
+#+end_src
+
+#+RESULTS:
+: Tupla: (1, "hello", 4.5, true)
+: Valores separados: 1, "hello", 4.5, true
+

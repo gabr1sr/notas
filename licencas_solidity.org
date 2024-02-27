@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       cd5d587b-a715-4d03-bbc9-cd8edc50272a
+:END:
+#+title: Licenças (Solidity)
+#+date: 2023-09-22
+- tags :: [[id:2411f6c4-d357-4d4f-aa93-28c6770b5bd0][Solidity]]
+- source :: [[https://docs.soliditylang.org/en/latest/layout-of-source-files.html#spdx-license-identifier][SPDX License Identifier]]
+
+É recomendado que todo contrato tenha um identificador de licença SPDX na primeira linha do arquivo.
+
+A licença pode ser definida da seguinte forma:
+
+#+begin_src solidity
+// SPDX-License-Identifier: <IDENTIFIER>
+#+end_src
+
+Onde o ~<IDENTIFIER>~ é o identificador de licença SPDX.
+
+Uma lista de identificadores pode ser encontrada [[https://spdx.org/licenses/][clicando aqui]].

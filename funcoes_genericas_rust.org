@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       dc26f5c2-c0a8-4d2d-8cbc-ddf389e73f9f
+:END:
+#+title: Funções Genéricas (Rust)
+#+date: [2024-02-28 Wed 15:37]
+- tags :: [[id:8c21413f-6d90-49cb-bd79-724e87ecc027][Funções (Rust)]]
+- source :: [[https://doc.rust-lang.org/reference/items/functions.html#generic-functions][Generic functions - The Rust Reference]]
+
+* Funções Genéricas
+As funções do Rust também suportam o uso de generics.
+
+Elas possibilitam que um ou mais tipos parametrizados apareçam na assinatura da função.
+
+Cada parâmetro de tipo deve ser declarado explicitamente dentro de ~<>~ e separado por vírgula:
+
+#+begin_src rust
+fn foo<A, B>(x: A, y: B) {
+    // ...
+}
+#+end_src
+
+Dentro da assinatura da função e do corpo dela, o nome do parâmetro de tipo pode ser usado como um tipo.
+
+Os limites de Traits podem ser especificados para os parâmetros de tipo para permitir que os métodos com esse Trait sejam chamados nos valores desse tipo.
+
+#+begin_src rust
+fn foo<T>(x: T) where T: Debug {
+    // ...
+}
+#+end_src
+
+Quando uma função genérica é referenciada, seu tipo é instanciado baseado no contexto da referência. Exemplo:
+
+#+begin_src rust
+use std::fmt::Debug;
+
+fn foo<T>(x: &[T]) where T: Debug {
+    println!("{:?}", x);
+}
+
+foo(&[1, 2]);
+#+end_src
+
+#+RESULTS:
+: [1, 2]
+

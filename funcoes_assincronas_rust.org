@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       73166044-83fe-4d0b-b64a-ee79d32f39ea
+:END:
+#+title: Funções Assíncronas (Rust)
+#+date: [2024-02-28 Wed 15:57]
+- tags :: [[id:8c21413f-6d90-49cb-bd79-724e87ecc027][Funções (Rust)]]
+- source :: [[https://doc.rust-lang.org/reference/items/functions.html#async-functions][Async functions - The Rust Reference]]
+
+Funções podem ser qualificadas como ~async~ e também pode ser combinado com o qualificador ~unsafe~:
+
+#+begin_src rust
+async fn regular_example() { }
+async unsafe fn unsafe_example() { }
+#+end_src
+
+Funções assíncronas não funcionam quando chamadas.
+
+Ao invés disso, elas capturam os argumentos em uma future.
+
+Quando pesquisada (polled), essa future irá executar o corpo da função.
+
+Uma função assíncrona é equivalente a uma função com um ~async move~ bloco como corpo e que retorna uma ~impl Future~:
+
+#+begin_src rust
+async fn example(x: &str) -> usize {
+    x.len()
+}
+#+end_src
+
+É o mesmo que:
+
+#+begin_src rust
+fn example<'a>(x: &'a str) -> impl Future<Output = usize> + 'a {
+    async move { x.len() }
+}
+#+end_src
+
+Veja a source para mais informações.

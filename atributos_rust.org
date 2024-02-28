@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       d764b423-4960-4d2e-a266-09bd42c3cf5e
+:END:
+#+title: Atributos (Rust)
+#+date: [2024-02-28 Wed 16:24]
+- tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
+- source :: [[https://doc.rust-lang.org/reference/attributes.html][Atributtes - The Rust Reference]]
+
+Os atributos são uma forma livre e geral de metadados que é interpretada de acordo com o nome, convenção, linguagem e versão do compilador.
+
+São modelados baseados nos atributos do [[https://ecma-international.org/publications-and-standards/standards/ecma-335/][ECMA-335]] com a síntaxe baseada no C# ([[https://ecma-international.org/publications-and-standards/standards/ecma-334/][ECMA-334]]).
+
+* Atributos Externos
+São os atributos escritos com apenas ~#~.
+
+#+begin_src rust
+#[attribute_here]
+fn foo() { /* ... */ }
+#+end_src
+
+* Atributos Internos
+São os atributos escritos com ~#~ seguido de ~!~.
+
+#+begin_src rust
+fn foo() {
+    #![attribute_here]
+    // ...
+}
+#+end_src

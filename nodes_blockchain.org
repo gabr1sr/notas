@@ -5,7 +5,7 @@
 #+date: [2023-11-28 ter 13:12]
 #+filetags: :blockchain:nodes:
 - tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
-- source ::
+- source :: [[https://learnweb3.io/lessons/what-even-is-a-blockchain/][What even is a blockchain? - LearnWeb3]]
 
 Nodes (ou Nós) são máquinas que rodam o software de uma blockchain.
 

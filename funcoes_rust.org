@@ -4,22 +4,82 @@
 #+title: Funções (Rust)
 #+date: [2024-02-26 Mon 21:54]
 - tags :: [[id:1e4aaeb6-e986-4716-a1a5-43da87d82321][Rust]]
-- source :: [[https://google.github.io/comprehensive-rust/control-flow-basics/functions.html][functions]], [[https://doc.rust-lang.org/reference/items/functions.html][Functions]]
+- source :: [[https://google.github.io/comprehensive-rust/control-flow-basics/functions.html][functions - Comprehensive Rust]], [[https://doc.rust-lang.org/reference/items/functions.html][Functions - The Rust Reference]]
 
 A palavra-chave ~fn~ é utilizada para declarar funções.
 
-Podemos anotar tipos em funções utilizando ~->~.
+* Anotação de Tipo
+Podemos anotar tipos em funções utilizando ~->~:
 
 #+begin_src rust
-fn answer_to_life_the_universe_and_everything() -> i32  {
-    return 42;
+fn answer_to_life_the_universe_and_everything() -> i32 {
+    42
 }
 #+end_src
 
+Quando a anotação de tipo é omitida, o tipo retornado será unit type: ~()~.
+
+* Parâmetros
 Podemos parametrizar as funções da seguinte forma:
 
 #+begin_src rust
-fn first((value, _): (i32, i32)) -> i32 {
-    value
+fn add(x: i32, y: i32) -> i32 {
+    x + y
 }
 #+end_src
+
+* Corpo da Função
+O corpo da função nada mais é do que o conteúdo da função.
+
+Tudo o que estiver entre ~{}~ após a declaração da função faz parte do corpo dela:
+
+#+begin_src rust
+fn foo() {
+    // corpo da função
+}
+#+end_src
+
+* Atributos em Funções
+Atributos externos são permitidos em funções.
+
+#+begin_src rust
+#[test]
+fn test_foo() {
+    // ...
+}
+#+end_src
+
+Atributos internos são permitidos dentro do corpo de funções.
+
+#+begin_src rust
+fn documented() {
+    #![doc = "Example"]
+    // ...
+}
+#+end_src
+
+* Atributos em Parâmetros de Funções
+Atributos externos são permitidos em parâmetros de funções.
+
+Os atributos built-in permitidos são restringidos a apenas:
+- cfg
+- cfg_attr
+- allow
+- warn
+- deny
+- forbid
+
+#+begin_src rust
+fn len(
+    #[cfg(windows)] slice: &[u16],
+    #[cfg(not(windows))] slice: &[u8],
+) -> usize {
+    slice.len()
+}
+#+end_src
+
+* Outros
+- [[id:dc26f5c2-c0a8-4d2d-8cbc-ddf389e73f9f][Funções Genéricas (Rust)]]
+- [[id:73166044-83fe-4d0b-b64a-ee79d32f39ea][Funções Assíncronas (Rust)]]
+- [[id:43ddca7a-953e-4bc3-9958-f00af677760a][Funções Const (Rust)]]
+- [[id:c500f258-21e8-4765-9e2b-4952aef05792][Extern (Rust)]]

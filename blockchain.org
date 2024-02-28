@@ -5,7 +5,7 @@
 #+date: 2023-09-06
 #+filetags: :blockchain:
 - tags :: [[id:af388f3d-da8c-4dbf-baca-6335c64a290e][Ciência da Computação]]
-- source :: [[https://academy.useweb3.xyz/certification/fundamentals][Blockchain Fundamentals]], [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/what-even-is-a-blockchain/][What even is a blockchain?]], [[https://www.youtube.com/watch?v=q9UzRyWRPcY][Quick Recap]]
+- source :: [[https://academy.useweb3.xyz/certification/fundamentals][Blockchain Fundamentals - UseWeb3 Academy]], [[https://learnweb3.io/degrees/ethereum-developer-degree/freshman/what-even-is-a-blockchain/][What even is a blockchain? - LearnWeb3]], [[https://www.youtube.com/watch?v=q9UzRyWRPcY][Lesson 1 Part 3 | Quick Recap - Solidity & Foundry Full Course]]
 
 Blockchain ou cadeia de blocos é um registro distribuído e imutável com uma lista de gravações ([[id:ad539989-2434-4a7d-a702-1db7e422ce85][Blocos (Blockchain)]]) que são linkados juntos de forma segura através de hashes criptográficos, rodando em cima de uma rede ponta-a-ponta descentralizada, mantendo, de maneira coletiva, o consenso de quais dados e transações são gravados no registro.
 

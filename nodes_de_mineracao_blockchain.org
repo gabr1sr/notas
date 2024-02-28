@@ -4,7 +4,7 @@
 #+title: Nodes de Mineração (Blockchain)
 #+date: [2023-11-28 ter 13:14]
 - tags :: [[id:82ac8203-170e-4e05-872c-f087e945fd8c][Nodes (Blockchain)]]
-- source ::
+- source :: [[https://en.wikipedia.org/wiki/Bitcoin#Mining][Bitcoin#Mining - Wikipedia]], [[https://learnweb3.io/lessons/what-even-is-a-blockchain/][What even is a blockchain? - LearnWeb3]]
 
 São Nodes responsáveis por agrupar novas transações de uma blockchain dentro de um bloco.
 

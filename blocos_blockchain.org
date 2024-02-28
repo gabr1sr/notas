@@ -5,7 +5,7 @@
 #+date: [2023-11-28 ter 13:06]
 #+filetags: :blockchain:blocks:
 - tags :: [[id:88a4cb76-7081-43d3-8b9e-58afd78624a6][Blockchain]]
-- source :: [[https://learnweb3.io/courses/9a3fafe4-b5eb-4329-bdef-97b2aa6aacc1/lessons/ce29b763-054c-4a19-bca8-dba1e55a6e52][LearnWeb3 DAO | What is a blockchain?]]
+- source :: [[https://learnweb3.io/lessons/what-even-is-a-blockchain/][What even is a blockchain? - LearnWeb3]]
 
 Blocos são estruturas de dados que agrupam transações e dados, que foram verificados e gravados pelos Nodes da rede através de um processo chamado de [[id:c62228b8-9da3-4da5-aa4a-19c6bc7c23f2][Consenso]], para serem incluídos em uma Blockchain.
 

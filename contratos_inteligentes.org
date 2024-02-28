@@ -52,7 +52,7 @@ Contratos inteligentes e transações na blockchain são incrivelmente rápidas 
 Por exemplo: transferências bancárias, especialmente as internacionais, podem demorar várias semanas, enquanto as transações na blockchain acontecem quase instantaneamente.
 
 ** Segurança e Imutabilidade
-Uma vez que um contrato inteligente é lançado (deployed),ele não pode ser alteardo e nem adulterado.
+Uma vez que um contrato inteligente é lançado (deployed), ele não pode ser alteardo e nem adulterado.
 
 Essa imutabilidade garante que os termos do contrato sejam imutáveis.
 
